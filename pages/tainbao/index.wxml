@@ -1,0 +1,65 @@
+<!--pages/tainbao/index.wxml-->
+<image class="card" src="../../images/teamReport/card.png"></image>
+<view class="duiwuname">球队队伍名称</view>
+<view class="duiwudetail">球队简介：xxx</view>
+<image class="logo" src="../../images/teamReport/logo.png"></image>
+<view class="logodetail">球队所在学院名称</view>
+
+<view class="duizhangxinxi">
+  <view class="duizhangdetail">队长信息</view>
+  <navigator class="xinxiadd2" bingtap="tianjiaxinxi" url="/pages/tianjia/index">
+    <image class="add2" src="../../images/teamReport/add2.png"></image>
+    <text class="add2txt">添加</text>
+  </navigator>
+</view>
+
+<!-- 信息显示 -->
+<view class="show">
+  <view>
+    <image class="duizhanglogo" src="../../images/teamReport/1.png"></image>
+    <view class="zhangdetail">
+      <view class="zhangname">{{userInfo.name}}</view>
+      <view class="zhangnumber">{{userInfo.number}}</view>
+    </view>
+  </view>
+</view>
+
+<view class="duizhangxinxi">
+  <view class="duizhangdetail">队员信息</view>
+  <navigator class="xinxiadd2" url="/pages/tianjia/index">
+    <image class="add2" src="../../images/teamReport/add2.png"></image>
+    <text class="add2txt">添加</text>
+  </navigator>
+</view>
+
+<!-- 信息显示 -->
+<view class="show1">
+  <view>
+    <image class="duiyuanlogo" src="../../images/teamReport/1.png"></image>
+    <view class="yuandetail">
+      <view class="yuanname">{{userInfo.name}}</view>
+      <view class="yuannumber">{{userInfo.number}}</view>
+    </view>
+  </view>
+  <view>
+    <image class="duiyuanlogo" src="../../images/teamReport/1.png"></image>
+    <view class="yuandetail">
+      <view class="yuanname">{{userInfo.name}}</view>
+      <view class="yuannumber">{{userInfo.number}}</view>
+    </view>
+  </view>
+  <view>
+    <image class="duiyuanlogo" src="../../images/teamReport/1.png"></image>
+    <view class="yuandetail">
+      <view class="yuanname">{{userInfo.name}}</view>
+      <view class="yuannumber">{{userInfo.number}}</view>
+    </view>
+  </view>
+</view>
+
+<view class="add1">
+  <image class="add1pic" src="../../images/teamReport/add1.png"></image>
+  <text class="add1txt">添加球队个性图片</text>
+</view>
+
+<button type="primary" class="button1">创建队伍</button>

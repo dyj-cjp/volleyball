@@ -1,0 +1,65 @@
+<!--pages/matchdata/matchdata.wxml-->
+<view class="navbar">
+  <text wx:for="{{navbar}}" data-idx="{{index}}" class="item {{currentTab==index ? 'active' : ''}}" wx:key="unique" bindtap="navbarTap">{{item}}</text>
+</view>
+<view class="back">
+ <!--小组赛-->
+ 
+ <view hidden="{{currentTab!==0}}">
+  <view class="table">
+ <view class="tr">
+   <view class="th2"></view>
+ <view class="th1">男组A组排行榜</view>
+ <view class="th">胜-负</view>
+ <view class="th ">胜率/胜赛场</view>
+ <view class="th ">积分</view>
+ </view>
+ <view class="littleline"></view>
+ <block wx:for="{{listData}}" wx:key="{[code]}">
+ <view class="tr bg-g">
+<view class="td2 o-o" wx:if="{{index== 0||index==1}}">{{item.code}}</view>
+<view class="td2" wx:else>{{item.code}}</view>
+ <view class="td1">{{item.team}}</view>
+ <view class="td">{{item.win}}-{{item.lose}}</view>
+ <view class="td">{{item.percent}}</view>
+ <view class="td">{{item.add}}</view>
+ </view>
+ <view class="littleline"></view>
+ </block>
+</view>
+
+<view class="table">
+ <view class="tr">
+<view class="th2"></view>
+ <view class="th1">男组B组排行榜</view>
+ <view class="th">胜-负</view>
+ <view class="th ">胜率/胜赛场</view>
+ <view class="th ">积分</view>
+ </view>
+ <view class="littleline"></view>
+ <block wx:for="{{listData2}}" wx:key="{[code]}">
+ <view class="tr bg-g">
+<view class="td2 o-o" wx:if="{{index== 0||index==1}}">{{item.code}}</view>
+<view class="td2" wx:else>{{item.code}}</view>
+ <view class="td1">{{item.team}}</view>
+ <view class="td">{{item.win}}-{{item.lose}}</view>
+ <view class="td">{{item.percent}}</view>
+ <view class="td">{{item.add}}</view>
+ </view>
+ <view class="littleline"></view>
+ </block>
+</view>
+</view>
+<!--8强-->
+<view hidden="{{currentTab!==1}}">
+</view>
+<!--4强-->
+<view hidden="{{currentTab!==2}}">
+</view>
+<!--半决赛-->
+<view hidden="{{currentTab!==3}}">
+</view>
+<!--总决赛-->
+<view hidden="{{currentTab!==4}}">
+</view>
+</view>

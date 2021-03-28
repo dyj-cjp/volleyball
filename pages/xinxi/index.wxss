@@ -1,0 +1,69 @@
+/* pages/xinxi/index.wxss */
+page{
+  background-color: #E5E5E5;
+}
+/* 导航栏 */
+.navbar{
+  display: flex;
+  font-size: 26rpx;
+  padding-top: 26rpx;
+  padding-bottom: 2rpx;
+  padding-left: 20rpx;
+  padding-right: 20rpx;
+  margin-bottom: 24rpx;
+  justify-content: space-between;
+  color: #8F8F8F;
+  background-color: #FFFFFF;
+}
+
+.pic{
+  background-color: #FFFFFF;
+}
+.pic1{
+  width: 674rpx;
+  height: 413rpx;
+  margin: 38rpx 0rpx 0rpx 38rpx;
+}
+
+.like{
+  width: 77rpx;
+  height: 47rpx;
+  margin-left: 520rpx;
+}
+.renqi{
+  display: flex;
+  float: right;
+  font-size: 20rpx;
+  margin-top: 10rpx;
+  margin-right: 60rpx;
+  font-family: STXihei;
+  color: #8F8F8F;
+}
+
+.liebiao{
+  margin: 10rpx;
+  width: 120rpx;
+  font-size: 30rpx;
+  margin-left: 40rpx;
+  margin-top: 20rpx;
+  border-bottom: 5rpx solid red;
+}
+
+.duiwu image{
+  width: 688rpx;
+  height: 144rpx;
+  margin: 20rpx 30rpx 30rpx 30rpx;
+}
+.dui{
+  position: relative;
+  width: 688rpx;
+  height: 144rpx;
+  margin-bottom: 40rpx;
+}
+.duitxt{
+  position: absolute;
+  top: 60rpx;
+  margin-left: 80rpx;
+  font-size: 30rpx;
+  color: #8F8F8F;
+}

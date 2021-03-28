@@ -1,0 +1,55 @@
+<!--pages/ssCompetition/2018Reviews/2018Reviews.wxml-->
+<view class="navbar">
+  <text wx:for="{{navbar}}" data-idx="{{index}}" class="item {{currentTab==index ? 'active' : ''}}" wx:key="unique" bindtap="navbarTap">{{item}}</text>
+</view>
+ <view class="line"></view>
+ <view class="back">
+ <!--荣耀榜-->
+ <view hidden="{{currentTab!==0}}"></view>
+ <!--照片墙-->
+ <view hidden="{{currentTab!==1}}">
+  <scroll-view class="flex" scroll-y="true" style="display:flex;white-space:nowrap;"> <!--上下滑动-->
+     <view class="show-info">
+       <view class="left"> <!--左边布局-->
+         <block wx:for="{{imgList}}" wx:if="{{index%2==0}}">
+        <view class="item7">
+          <image class="itempic" src="{{item.img}}"></image>
+          <view class="buttonbox">
+            <view class="date">{{item.date}}</view>
+            <view class="little">
+              <image class="zan" src="../images/nozan.png"></image> <!--点赞图片-->
+              <view class="count">{{item.count}}</view>
+            </view>
+         </view>
+        </view>
+      </block>
+       </view>
+
+       <view class="right"><!--右边布局-->
+        <block wx:for="{{imgList}}" wx:if="{{index%2!=0}}">
+        <view class="item7">
+          <image class="itempic" src="{{item.img}}"></image>
+          <view class="buttonbox">
+            <view class="date">{{item.date}}</view>
+          <view class="little"> 
+             <image class="zan" src="../images/nozan.png"></image> 
+              <view class="count">{{item.count}}</view>
+            </view>
+         </view>
+        </view>
+      </block>
+       </view>
+      </view>
+    </scroll-view>
+      
+       <view class="orange" bindtap="chooseSource">
+         <image src="../images/add.png"></image>
+       </view>
+    
+</view>
+ 
+<!--精彩集锦-->
+<view hidden="{{currentTab!==2}}">
+  
+</view>
+</view>

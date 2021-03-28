@@ -1,0 +1,62 @@
+<!--pages/ssCompetition/ssCompetition.wxml-->
+  <!--导航条-->
+<view class="navbar">
+  <text wx:for="{{navbar}}" data-idx="{{index}}" class="item {{currentTab==index ? 'active' : ''}}" wx:key="unique" bindtap="navbarTap">{{item}}</text>
+</view>
+ <view class="back">
+<!--四人排-->
+<view hidden="{{currentTab!==0}}">
+  <view class="bigbox">
+<view class='buttonbox' bindtap="totianbao"><view>院队队伍填报</view>></view>
+</view>
+<view class="bigbox">
+<view class='buttonbox' bindtap="toxinxi"><view>院队队伍信息</view>></view>
+</view>
+<view class="bigbox">
+<view class='buttonbox1' bindtap="rmss"><view>热门赛事</view>></view>
+<view class="obox">
+<view class="type">{{hot[0]}}</view>
+<text>{{hot[1]}}</text>
+<image class="vs" src="../images/vs.png"></image>
+<text>{{hot[2]}}</text>
+<view class="time"> {{hot[3]}}</view>
+</view>
+</view>
+<view class="bigbox">
+<view class='buttonbox1'><view>小组赛抽签结果</view>></view>
+<view class="one">
+<view class="image-parent">
+<image class="pic" src="../images/boys.png"></image>
+<view class="boys">男排组</view>
+</view>
+<view class="image-parent">
+<image class="pic" src="../images/girls.png"></image>
+<view class="girls">女排组</view>
+</view>
+</view>
+</view>
+<view class="bigbox">
+<view class='buttonbox1' bindtap="bssj"><view>比赛数据</view>></view>
+  <scroll-view class="sg" scroll-x="true" style="display:flex;white-space:nowrap;">
+    <block wx:for="{{i}}">
+        <view class="box">
+        <text>{{item}}</text>
+        </view>
+    </block>
+  </scroll-view>
+</view>
+<view class="bigbox">
+<view class='buttonbox' bindtap="wjhg"><view>往届回顾</view>></view>
+</view>
+</view>
+</view>
+<!--院际赛-->
+<view hidden="{{currentTab!==1}}">
+  tab_02
+</view>
+ 
+<!--校队-->
+<view hidden="{{currentTab!==2}}">
+  tab_03
+</view>
+

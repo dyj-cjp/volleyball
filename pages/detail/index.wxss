@@ -1,0 +1,6 @@
+/* pages/detail/index.wxss */
+.teamimg{
+  width: 672rpx;
+  height: 492rpx;
+  margin: 40rpx;
+}

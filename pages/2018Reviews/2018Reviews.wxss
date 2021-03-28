@@ -1,0 +1,108 @@
+/* pages/ssCompetition/2018Reviews/2018Reviews.wxss */
+page{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.navbar{
+  flex: none;
+  display: flex;
+  background: #F7F7F7;
+  color:#505050;
+  font-size:30rpx;
+}
+.navbar .item{
+  position: relative;
+  flex: auto;
+  text-align: center;
+  line-height: 80rpx;
+}
+.navbar .item.active{
+  color:black;
+}
+.navbar .item.active:after{
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 35rpx;
+  right: 0rpx;
+  height: 7rpx;
+  background: #F55438;
+  width:180rpx;
+}
+
+.back{
+  background-color:#F7F7F7;
+  height:100%;
+  border-top:2vh solid #C9C9C9;
+}
+.show-info{
+  display:flex;
+  flex-direction:row;
+  align-items:flex-start;
+  padding:10rpx 0;
+  box-sizing:border-box;
+}
+.left{
+  width:50%;
+  height:80%;
+  display:flex;
+  flex-direction:column;
+  margin:40rpx 39rpx;
+}
+.right{
+  width:50%;
+  height:80%;
+  display:flex;
+  flex-direction:column;
+  margin:100rpx 39rpx;
+}
+.itempic{
+  width:306rpx;
+  height:18vh;
+}
+.date{
+  font-size:20rpx;
+  color:#8F8F8F;
+}
+.count{
+  font-size:20rpx;
+  color:#8F8F8F;
+}
+.zan{
+  width:28rpx;
+  height:26rpx;
+  margin:0rpx 10rpx;
+}
+.item7{
+  margin:0 0 20rpx 0;
+}
+.buttonbox{
+  margin:15rpx 5rpx;
+  display:flex;
+  justify-content:space-between;
+  line-height:center;
+}
+
+.little{
+  display:flex;
+  line-height:center;
+}
+.orange{
+  height:7vh;
+  background:#FFFFFF;
+  border-top:3rpx solid #C8C8C8;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+.orange image{
+  width:80rpx;
+  height:6vh;
+}
+.flex{
+  height:85vh;
+}
+

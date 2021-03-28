@@ -1,0 +1,46 @@
+<!--pages/xinxi/index.wxml-->
+<view class="navbar">
+  <navigator>信院</navigator>
+  <navigator>法学</navigator>
+  <navigator>人文</navigator>
+  <navigator>经济</navigator>
+  <navigator>地旅</navigator>
+  <navigator>数院</navigator>
+  <navigator>工商</navigator>
+  <navigator>财税</navigator>
+  <navigator>公管</navigator>
+</view>
+
+<view class="pic">
+  <image class="pic1" src="../../images/teamInfomation/3.png"></image>
+  <image class="like" src="../../images/teamInfomation/like.png"></image>
+  <view class="renqi">
+    <text>人气值</text>
+    <text>118</text>
+  </view>
+</view>
+
+<!-- 队伍列表 -->
+<view class="liebiao">队伍列表</view>
+<view class="duiwu">
+  <navigator class="dui" url="/pages/detail/index">
+    <image src="../../images/teamInfomation/rectangle.png"></image>
+    <text class="duitxt">信院男排1队</text>
+  </navigator>
+  <navigator class="dui">
+    <image src="../../images/teamInfomation/rectangle.png"></image>
+    <text class="duitxt">信院男排2队</text>
+  </navigator>
+  <navigator class="dui">
+    <image src="../../images/teamInfomation/rectangle.png"></image>
+    <text class="duitxt">信院男排3队</text>
+  </navigator>
+  <navigator class="dui">
+    <image src="../../images/teamInfomation/rectangle.png"></image>
+    <text class="duitxt">信院女排1队</text>
+  </navigator>
+  <navigator class="dui">
+    <image src="../../images/teamInfomation/rectangle.png"></image>
+    <text class="duitxt">信院女排2队</text>
+  </navigator>
+</view>

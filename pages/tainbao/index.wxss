@@ -1,0 +1,161 @@
+/* pages/tainbao/index.wxss */
+page {
+  background-color: #FFFFFF;
+}
+
+/* 球队名片 */
+.card {
+  position: relative;
+  width: 688rpx;
+  height: 325rpx;
+  margin: 32rpx;
+}
+
+.duiwuname {
+  position: absolute;
+  top: 120rpx;
+  left: 100rpx;
+}
+
+.duiwudetail {
+  position: absolute;
+  top: 180rpx;
+  left: 100rpx;
+  font-size: 18rpx;
+}
+
+.logo {
+  position: absolute;
+  width: 72rpx;
+  height: 72rpx;
+  top: 100rpx;
+  left: 570rpx;
+}
+
+.logodetail {
+  position: absolute;
+  top: 180rpx;
+  left: 520rpx;
+  font-size: 20rpx;
+  color: white;
+  font-family: STXihei Regular;
+}
+
+/* 队长信息 */
+.duizhangxinxi {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 50rpx;
+  margin-right: 50rpx;
+}
+
+.duizhangdetail {
+  font-size: 28rpx;
+  padding-bottom: 5rpx;
+  border-bottom: 5rpx solid red;
+}
+
+/* 显示 */
+.xinxiadd2 {
+  display: flex;
+}
+
+/* 头像 */
+.add2 {
+  width: 23rpx;
+  height: 23rpx;
+  margin-right: 6rpx;
+  margin-top: 6rpx;
+}
+
+.add2txt {
+  font-size: 24rpx;
+  font-family: STXihei Regular;
+}
+
+.show {
+  width: 678rpx;
+  height: 144rpx;
+  margin: 35rpx;
+  display: flex;
+  background-color: #F5F5F5;
+  border-radius: 20rpx;
+}
+
+.duizhanglogo {
+  float: left;
+  width: 82rpx;
+  height: 82rpx;
+  margin: 30rpx;
+}
+
+.zhangdetail {
+  float: left;
+  margin-top: 40rpx;
+  font-size: 24rpx;
+  font-family: Regular;
+}
+
+.zhangnumber {
+  font-size: 20rpx;
+}
+
+/* 队员 */
+.show1 {
+  width: 678rpx;
+  height: 422rpx;
+  margin: 35rpx;
+  display: grid;
+  background-color: #F5F5F5;
+  border-radius: 20rpx;
+}
+
+.duiyuanlogo {
+  float: left;
+  width: 82rpx;
+  height: 82rpx;
+  margin: 30rpx;
+}
+
+.yuandetail {
+  float: left;
+  margin-top: 40rpx;
+  font-size: 24rpx;
+  font-family: Regular;
+}
+
+.yuannumber {
+  font-size: 20rpx;
+  padding-bottom: 38rpx;
+  border-bottom: 1px solid #c9c9c9;
+}
+
+/* 个性图片 */
+.add1 {
+  position: relative;
+  width: 688rpx;
+  height: 170rpx;
+  margin-left: 35rpx;
+  background-color: #F5F5F5;
+  border-radius: 20rpx;
+}
+
+.add1pic {
+  width: 65rpx;
+  height: 65rpx;
+  margin-left: 180rpx;
+  margin-top: 50rpx;
+}
+
+.add1txt {
+  position: absolute;
+  margin-top: 60rpx;
+  margin-left: 30rpx;
+  color: #F55438;
+}
+
+.button1 {
+  height: 80rpx;
+  width: 300rpx;
+  margin-top: 40rpx;
+}

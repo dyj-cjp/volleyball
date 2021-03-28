@@ -1,0 +1,46 @@
+{
+  "pages": [
+    "pages/home/index",
+    "pages/tainbao/index",
+    "pages/xinxi/index",
+    "pages/tianjia/index",
+    "pages/detail/index",
+    "pages/quan/index",
+    "pages/mine/index",
+    "pages/ssCompetition/ssCompetition",
+    "pages/2018Reviews/2018Reviews",
+    "pages/matchdata/matchdata",
+    "pages/specificCP/specificCP",
+    "pages/hotgame/hotgame",
+    "pages/wjReviews/wjReviews",
+    "pages/index/index"
+  ],
+  "window": {
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#E32F1D",
+    "navigationBarTitleText": "排球",
+    "navigationBarTextStyle":"white"
+  },
+  "tabBar": {
+    "list": [{
+      "pagePath": "pages/home/index",
+      "text": "首页",
+      "iconPath": "./images/homeImg/home.png",
+      "selectedIconPath": "./images/homeImg/homeActive.png"
+    },
+    {
+      "pagePath": "pages/quan/index",
+      "text": "动态",
+      "iconPath": "./images/homeImg/quan.png",
+      "selectedIconPath": "./images/homeImg/quanActive.png"
+    },
+    {
+      "pagePath": "pages/mine/index",
+      "text": "我的",
+      "iconPath": "./images/homeImg/mine.png",
+      "selectedIconPath": "./images/homeImg/mineActive.png"
+    }]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

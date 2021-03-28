@@ -1,0 +1,297 @@
+<!--pages/hotgame/hotgame.wxml-->
+<wxs module="indexofStr">
+ module.exports.includes = function (str1, str2) {
+  return str1.indexOf(str2)
+ }
+</wxs>
+<view class="navbar">
+  <text wx:for="{{navbar}}" data-idx="{{index}}" class="item {{currentTab==index ? 'active' : ''}}" wx:key="unique" bindtap="navbarTap">{{item}}</text>
+</view>
+ <view class="back">
+ <!--全部-->
+ <view hidden="{{currentTab!==0}}">
+  <view class="table">
+ <block wx:for="{{listData}}">
+ <navigator class="tr" url="{{item.url}}">
+   <view class="item4">
+   <image class="team" src="../images/team.png"></image>
+   <view class="name">{{item.team1}}</view>
+  </view>
+  <view class="item4">
+    <view class="logo_text">
+       <view class="two">
+    <view class="text">{{item.type}}</view>
+    <view class="text">{{item.time}}</view>
+       </view>
+       <view wx:if="{{currenTime>item.time}}">
+        <image class="logo" src="../images/over.png"></image>
+       </view>
+   <view wx:else>
+    <image class="logo" src="../images/notstarted.png"></image>
+   </view>
+    
+  </view>
+    <image class="vs" src="../images/vs.png"></image>
+    <view class="text">{{item.address}}</view>
+  </view>
+ <view class="item4">
+ <image class="team" src="../images/team.png"></image>
+ <view class="name">{{item.team2}}</view>
+</view>
+ </navigator>
+ </block>
+</view>
+   </view>
+   <!--信院-->
+ <view hidden="{{currentTab!==1}}">
+  <view class="table">
+ <block wx:for="{{listData}}">
+<view wx:if="{{indexofStr.includes(item.team2,'信院') > -1||indexofStr.includes(item.team1,'信院') > -1}}">
+ <navigator class="tr" url="{{item.url}}">
+   <view class="item4">
+   <image class="team" src="../images/team.png"></image>
+   <view class="name">{{item.team1}}</view>
+  </view>
+  <view class="item4">
+    <view class="logo_text">
+       <view class="two">
+    <view class="text">{{item.type}}</view>
+    <view class="text">{{item.time}}</view>
+       </view>
+       <view wx:if="{{currenTime>item.time}}">
+        <image class="logo" src="../images/over.png"></image>
+       </view>
+   <view wx:else>
+    <image class="logo" src="../images/notstarted.png"></image>
+   </view>
+    
+  </view>
+    <image class="vs" src="../images/vs.png"></image>
+    <view class="text">{{item.address}}</view>
+  </view>
+ <view class="item4">
+ <image class="team" src="../images/team.png"></image>
+ <view class="name">{{item.team2}}</view>
+</view>
+ </navigator>
+</view>
+ </block>
+</view>
+   </view>
+   <!--人文-->
+ <view hidden="{{currentTab!==2}}">
+  <view class="table">
+ <block wx:for="{{listData}}">
+<view wx:if="{{indexofStr.includes(item.team2,'人文') > -1||indexofStr.includes(item.team1,'人文') > -1}}">
+ <navigator class="tr" url="{{item.url}}">
+   <view class="item4">
+   <image class="team" src="../images/team.png"></image>
+   <view class="name">{{item.team1}}</view>
+  </view>
+  <view class="item4">
+    <view class="logo_text">
+       <view class="two">
+    <view class="text">{{item.type}}</view>
+    <view class="text">{{item.time}}</view>
+       </view>
+       <view wx:if="{{currenTime>item.time}}">
+        <image class="logo" src="../images/over.png"></image>
+       </view>
+   <view wx:else>
+    <image class="logo" src="../images/notstarted.png"></image>
+   </view>
+    
+  </view>
+    <image class="vs" src="../images/vs.png"></image>
+    <view class="text">{{item.address}}</view>
+  </view>
+ <view class="item4">
+ <image class="team" src="../images/team.png"></image>
+ <view class="name">{{item.team2}}</view>
+</view>
+ </navigator>
+</view>
+ </block>
+</view>
+   </view>
+   <!--经济-->
+ <view hidden="{{currentTab!==3}}">
+  <view class="table">
+ <block wx:for="{{listData}}">
+<view wx:if="{{indexofStr.includes(item.team2,'经济') > -1||indexofStr.includes(item.team1,'经济') > -1}}">
+ <navigator class="tr" url="{{item.url}}">
+   <view class="item4">
+   <image class="team" src="../images/team.png"></image>
+   <view class="name">{{item.team1}}</view>
+  </view>
+  <view class="item4">
+    <view class="logo_text">
+       <view class="two">
+    <view class="text">{{item.type}}</view>
+    <view class="text">{{item.time}}</view>
+       </view>
+       <view wx:if="{{currenTime>item.time}}">
+        <image class="logo" src="../images/over.png"></image>
+       </view>
+   <view wx:else>
+    <image class="logo" src="../images/notstarted.png"></image>
+   </view>
+    
+  </view>
+    <image class="vs" src="../images/vs.png"></image>
+    <view class="text">{{item.address}}</view>
+  </view>
+ <view class="item4">
+ <image class="team" src="../images/team.png"></image>
+ <view class="name">{{item.team2}}</view>
+</view>
+ </navigator>
+</view>
+ </block>
+</view>
+   </view>
+   <!--地旅-->
+ <view hidden="{{currentTab!==4}}">
+  <view class="table">
+ <block wx:for="{{listData}}">
+<view wx:if="{{indexofStr.includes(item.team2,'地旅') > -1||indexofStr.includes(item.team1,'地旅') > -1}}">
+ <navigator class="tr" url="{{item.url}}">
+   <view class="item4">
+   <image class="team" src="../images/team.png"></image>
+   <view class="name">{{item.team1}}</view>
+  </view>
+  <view class="item4">
+    <view class="logo_text">
+       <view class="two">
+    <view class="text">{{item.type}}</view>
+    <view class="text">{{item.time}}</view>
+       </view>
+       <view wx:if="{{currenTime>item.time}}">
+        <image class="logo" src="../images/over.png"></image>
+       </view>
+   <view wx:else>
+    <image class="logo" src="../images/notstarted.png"></image>
+   </view>
+    
+  </view>
+    <image class="vs" src="../images/vs.png"></image>
+    <view class="text">{{item.address}}</view>
+  </view>
+ <view class="item4">
+ <image class="team" src="../images/team.png"></image>
+ <view class="name">{{item.team2}}</view>
+</view>
+ </navigator>
+</view>
+ </block>
+</view>
+   </view>
+   <!--数院-->
+ <view hidden="{{currentTab!==5}}">
+  <view class="table">
+ <block wx:for="{{listData}}">
+<view wx:if="{{indexofStr.includes(item.team2,'数院') > -1||indexofStr.includes(item.team1,'数院') > -1}}">
+ <navigator class="tr" url="{{item.url}}">
+   <view class="item4">
+   <image class="team" src="../images/team.png"></image>
+   <view class="name">{{item.team1}}</view>
+  </view>
+  <view class="item4">
+    <view class="logo_text">
+       <view class="two">
+    <view class="text">{{item.type}}</view>
+    <view class="text">{{item.time}}</view>
+       </view>
+       <view wx:if="{{currenTime>item.time}}">
+        <image class="logo" src="../images/over.png"></image>
+       </view>
+   <view wx:else>
+    <image class="logo" src="../images/notstarted.png"></image>
+   </view>
+    
+  </view>
+    <image class="vs" src="../images/vs.png"></image>
+    <view class="text">{{item.address}}</view>
+  </view>
+ <view class="item4">
+ <image class="team" src="../images/team.png"></image>
+ <view class="name">{{item.team2}}</view>
+</view>
+ </navigator>
+</view>
+ </block>
+</view>
+   </view>
+   <!--工商-->
+ <view hidden="{{currentTab!==6}}">
+  <view class="table">
+ <block wx:for="{{listData}}">
+<view wx:if="{{indexofStr.includes(item.team2,'工商') > -1||indexofStr.includes(item.team1,'工商') > -1}}">
+ <navigator class="tr" url="{{item.url}}">
+   <view class="item4">
+   <image class="team" src="../images/team.png"></image>
+   <view class="name">{{item.team1}}</view>
+  </view>
+  <view class="item4">
+    <view class="logo_text">
+       <view class="two">
+    <view class="text">{{item.type}}</view>
+    <view class="text">{{item.time}}</view>
+       </view>
+       <view wx:if="{{currenTime>item.time}}">
+        <image class="logo" src="../images/over.png"></image>
+       </view>
+   <view wx:else>
+    <image class="logo" src="../images/notstarted.png"></image>
+   </view>
+    
+  </view>
+    <image class="vs" src="../images/vs.png"></image>
+    <view class="text">{{item.address}}</view>
+  </view>
+ <view class="item4">
+ <image class="team" src="../images/team.png"></image>
+ <view class="name">{{item.team2}}</view>
+</view>
+ </navigator>
+</view>
+ </block>
+</view>
+   </view>
+   <!--财税-->
+ <view hidden="{{currentTab!==7}}">
+  <view class="table">
+ <block wx:for="{{listData}}">
+<view wx:if="{{indexofStr.includes(item.team2,'财税') > -1||indexofStr.includes(item.team1,'财税') > -1}}">
+ <navigator class="tr" url="{{item.url}}">
+   <view class="item4">
+   <image class="team" src="../images/team.png"></image>
+   <view class="name">{{item.team1}}</view>
+  </view>
+  <view class="item4">
+    <view class="logo_text">
+       <view class="two">
+    <view class="text">{{item.type}}</view>
+    <view class="text">{{item.time}}</view>
+       </view>
+       <view wx:if="{{currenTime>item.time}}">
+        <image class="logo" src="../images/over.png"></image>
+       </view>
+   <view wx:else>
+    <image class="logo" src="../images/notstarted.png"></image>
+   </view>
+    
+  </view>
+    <image class="vs" src="../images/vs.png"></image>
+    <view class="text">{{item.address}}</view>
+  </view>
+ <view class="item4">
+ <image class="team" src="../images/team.png"></image>
+ <view class="name">{{item.team2}}</view>
+</view>
+ </navigator>
+</view>
+ </block>
+</view>
+   </view>
+  </view>

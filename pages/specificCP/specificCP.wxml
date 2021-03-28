@@ -1,0 +1,37 @@
+<!--pages/specificCP/specificCP.wxml-->
+<view class="navbar">
+  <text wx:for="{{navbar}}" data-idx="{{index}}" class="item {{currentTab==index ? 'active' : ''}}" wx:key="unique" bindtap="navbarTap">{{item}}</text>
+</view>
+<view class="back">
+ <!--数据-->
+ <view hidden="{{currentTab!==0}}">
+  <view class="table">
+ <view class="tr">
+ <view class="th1">球队</view>
+ <view class="th">第1局</view>
+ <view class="th ">第2局</view>
+ <view class="th ">第3局</view>
+ <view class="th ">总比分</view>
+ </view>
+ <view class="littleline"></view>
+ <block wx:for="{{listData}}" wx:key="{[code]}">
+ <view class="tr bg-g">
+ <view class="td1">{{item.team}}</view>
+ <view class="td">{{item.one}}</view>
+ <view class="td">{{item.two}}</view>
+ <view class="td">{{item.three}}</view>
+ <view class="td">{{item.all}}</view>
+ </view>
+ </block>
+ <view class="littleline"></view>
+</view>
+<view class="live">
+  <image src="../images/live.png"></image>
+  <navigator class="word" url="">直播链接</navigator>
+</view>
+ </view>
+ <!--精彩锦集-->
+ <view hidden="{{currentTab!==1}}">
+</view>
+</view>
+

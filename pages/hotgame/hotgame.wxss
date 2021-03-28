@@ -1,0 +1,93 @@
+/* pages/hotgame/hotgame.wxss */
+page{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.navbar{
+  flex: none;
+  display: flex;
+  background: #F7F7F7;
+  color:#505050;
+  font-size:30rpx;
+}
+.navbar .item{
+  position: relative;
+  flex: auto;
+  text-align: center;
+  line-height: 80rpx;
+}
+.navbar .item.active{
+  color:#505050;
+  font-weight:600;
+}
+.navbar .item.active:after{
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 6%;
+  right: 0;
+  height: 7rpx;
+  background: #F55438;
+  width:80rpx;
+}
+
+.back{
+  background:#F7F7F7;
+  height:100%;
+  border-top:2vh solid #E5E5E5;
+}
+.table {
+  border: 0px solid darkgray;
+ }
+ .tr {
+  display: flex;
+  justify-content: center;
+  height: 16vh;
+  align-items: center;
+  background:#FFFFFF;
+  margin:26rpx 33rpx 26rpx 29rpx;
+  border-radius:10px;
+ }
+ .team{
+   width:110rpx;
+   height:7vh;
+ }
+ .name{
+   color:#3E3E3E;
+   font-size:20rpx;
+   text-align:center;
+ }
+ .item4{
+   align-items:center;
+   margin:0rpx 20rpx;
+   display:flex;
+   flex-direction:column;
+ }
+ .text{
+   color:#8F8F8F;
+   font-size:20rpx;
+   text-align:center;
+ }
+ .vs{
+   width:48rpx;
+   height:2.5vh;
+   margin:20rpx 0rpx;
+ }
+ .logo{
+   width:55rpx;
+   height:4.5vh;
+ }
+ .logo_text{
+   display:flex;
+   flex-direction:row;
+   margin-left:10px;
+ }
+ .two{
+   margin-left:40rpx;
+   width:200rpx;
+   display:flex;
+   flex-direction:column;
+ }
+ 

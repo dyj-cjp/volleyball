@@ -1,0 +1,47 @@
+/* pages/tianjia/index.wxss */
+/* 大卡片 */
+.tianjia{
+  width: 651rpx;
+  height: 525rpx;
+  margin-top: 300rpx;
+  margin-left: 55rpx;
+  border-radius: 21rpx;
+  border: 2rpx solid #F55438;
+}
+/* 文字 */
+.tianjia1{
+  display: flex;
+  justify-content: space-between;
+  margin-left: 240rpx;
+  margin-top: 50rpx;
+  font-size: 30rpx;
+}
+/* 关闭图标 */
+.close{
+  width: 26rpx;
+  height: 26rpx;
+  margin-top:-30rpx;
+  margin-right: 20rpx;
+}
+/* 文本 */
+.tianjia .addx{
+  display: flex;
+  margin: 60rpx 80rpx;
+}
+/* 文本框 */
+.tianjia input{
+  height: 56rpx;
+  width: 375rpx;
+  border-radius: 20rpx;
+  border: 2rpx solid #B8B7B7;
+  text-align: center;
+}
+/* 按钮 */
+.addsure{
+  width: 192rpx !important;
+  height: 82rpx;
+  border-radius: 21rpx;
+  font-family: STXihei Regular;
+  font-size: 30rpx;
+  border: 1px solid #F55438;
+}
