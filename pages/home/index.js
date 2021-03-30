@@ -1,4 +1,5 @@
 // pages/home/index.js
+const $api = require('../../network/request.js').API;
 Page({
 
   /**
