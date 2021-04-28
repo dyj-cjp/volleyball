@@ -1,0 +1,110 @@
+/* pages/draw/draw.wxss */
+.journalBooks{
+  height:90vh;
+}
+.box{
+  margin:120rpx 0rpx 0rpx 50rpx;
+  background-color:#f5f5f5;
+  width:600rpx;
+  height:68%;
+  border-radius:10px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  padding:70rpx 0;
+}
+.title{
+  font-size:38rpx;
+  color:#E32F1E;
+  margin:0 220rpx 10rpx 220rpx;
+}
+.content{
+  font-size:34rpx;
+  color:#F46249;
+  margin:30rpx 50rpx 0 50rpx;
+}
+.line{
+  background-color:#D2D2D2;
+  height:3rpx;
+  margin:10rpx auto;
+  width:200rpx;
+}
+.line2{
+  background-color:#C9C8C8;
+  height:1rpx;
+  margin:10rpx auto;
+  width:380rpx;
+}
+.rules{
+  font-size:32rpx;
+  color:#505050;
+  margin:25rpx 110rpx 10rpx 110rpx;
+}
+.row{
+  display:flex;
+  height:80rpx;
+  margin:50rpx;
+  border:3rpx solid #ccc;
+  border-radius:10rpx;
+}
+.text-ti{
+  position:absolute;
+  background:#f5f5f5;
+  margin:-25rpx 0 0 10rpx;
+  padding:0 5rpx;
+  color:#F46249;
+}
+.get{
+  margin:15rpx 0 0 90rpx;
+  line-height:90rpx;
+  color:#505050;
+  font-size:28rpx;
+}
+.bt{
+  background:radial-gradient(circle,#E32F1D 30%,#F46249 50%,#FFD2D2 75%,white 100%);
+  width:150rpx;
+  height:150rpx;
+  border-radius:40rem;
+  color:white;
+  border:none;
+  font-size:38rpx;
+  text-align:center;
+  line-height:150rpx;
+  margin:70rpx 180rpx 0 180rpx;
+}
+.row2{
+  display:flex;
+  margin:50rpx;
+}
+.text{
+  position:absolute;
+}
+.stepper{
+  width:80px;
+  height:26px;
+  margin:0 0 0 250rpx;
+  border:1px solid #ccc;
+  border-radius:3px;
+}
+.stepper text{
+  float:left;
+  width:19px;
+  line-height:26px;
+  text-align:center;
+  color:#505050;
+}
+.stepper input{
+  width:40px;
+  height:26px;
+  float:left;
+  margin:0 auto;
+  text-align:center;
+  font-size:12px;
+  border-left:1px solid #ccc;
+  border-right:1px solid #ccc;
+  
+}
+.gray{
+  background:#EEEEEE;
+  height:5rpx;
+}

@@ -4,7 +4,7 @@
     "ignore": []
   },
   "setting": {
-    "urlCheck": false,
+    "urlCheck": true,
     "es6": true,
     "enhance": false,
     "postcss": true,
@@ -21,9 +21,8 @@
     "checkSiteMap": true,
     "uploadWithSourceMap": true,
     "compileHotReLoad": false,
-    "useMultiFrameRuntime": true,
+    "useMultiFrameRuntime": false,
     "useApiHook": true,
-    "useApiHostProcess": false,
     "babelSetting": {
       "ignore": [],
       "disablePlugins": [],
@@ -41,103 +40,33 @@
   },
   "compileType": "miniprogram",
   "libVersion": "2.16.0",
-  "appid": "wx5816707d2ed8c621",
-  "projectname": "volleyball",
+  "appid": "wx23d2501ee1423a88",
+  "projectname": "ball",
   "debugOptions": {
     "hidedInDevtools": []
   },
   "scripts": {},
-  "staticServerOptions": {
-    "baseURL": "",
-    "servePath": ""
-  },
   "isGameTourist": false,
   "simulatorType": "wechat",
   "simulatorPluginLibVersion": {},
   "condition": {
-    "plugin": {
+    "search": {
+      "list": []
+    },
+    "conversation": {
       "list": []
     },
     "game": {
+      "list": []
+    },
+    "plugin": {
       "list": []
     },
     "gamePlugin": {
       "list": []
     },
     "miniprogram": {
-      "list": [
-        {
-          "name": "pages/home/index",
-          "pathName": "pages/home/index",
-          "query": "",
-          "scene": null
-        },
-        {
-          "name": "pages/tainbao/index",
-          "pathName": "pages/tainbao/index",
-          "query": "",
-          "scene": null
-        },
-        {
-          "name": "pages/tianjia/index",
-          "pathName": "pages/tianjia/index",
-          "query": "",
-          "scene": null
-        },
-        {
-          "name": "pages/xinxi/index",
-          "pathName": "pages/xinxi/index",
-          "query": "",
-          "scene": null
-        },
-        {
-          "name": "pages/detail/index",
-          "pathName": "pages/detail/index",
-          "query": "",
-          "scene": null
-        },
-        {
-          "name": "pages/tainbao/index",
-          "pathName": "pages/tainbao/index",
-          "query": "",
-          "scene": null
-        },
-        {
-          "name": "pages/xinxi/index",
-          "pathName": "pages/xinxi/index",
-          "query": "",
-          "scene": null
-        },
-        {
-          "name": "pages/mine/index",
-          "pathName": "pages/mine/index",
-          "query": "",
-          "scene": null
-        },
-        {
-          "name": "pages/play/index",
-          "pathName": "pages/play/index",
-          "query": "",
-          "scene": null
-        },
-        {
-          "name": "pages/work/index",
-          "pathName": "pages/work/index",
-          "query": "",
-          "scene": null
-        },
-        {
-          "name": "pages/teach/index",
-          "pathName": "pages/teach/index",
-          "query": "",
-          "scene": null
-        },
-        {
-          "name": "pages/detail/index",
-          "pathName": "pages/detail/index",
-          "scene": null
-        }
-      ]
+      "list": []
     }
   }
 }

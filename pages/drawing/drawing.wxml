@@ -1,0 +1,7 @@
+<!--pages/drawing/drawing.wxml-->
+<view class="box">
+  <text class="title">{{id}}</text>
+  <view class="line"></view>
+  <view class="bt" bindtap="buttonListener">抽 取</view>
+</view>
+<button class="share" open-type='share'>分享给好友</button>

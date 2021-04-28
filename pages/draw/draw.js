@@ -1,17 +1,28 @@
-// pages/wjReviews/wjReviews.js
+// pages/draw/draw.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-listData:[
-  {"date":"2020","img":"../images/wj1.png","url":"/pages/2018Reviews/2018Reviews"},
-  {"date":"2019","img":"../images/wj2.png","url":"/pages/2018Reviews/2018Reviews"},
-  {"date":"2018","img":"../images/wj3.png","url":"/pages/2018Reviews/2018Reviews"},
-  {"date":"2017","img":"../images/wj4.png","url":"/pages/2018Reviews/2018Reviews"}
-  ],
-},
+    num:1,
+    main:'文字主题'
+
+  },
+  inputvalue:function(e){
+    this.setData({
+      main:e.detail.value
+    })
+  },
+  buttonListener:function(){
+    var that=this
+    wx.navigateTo({
+      url:'../drawing/drawing?main='+that.data.main
+    })
+  },
+  
+
+  
 
   /**
    * 生命周期函数--监听页面加载

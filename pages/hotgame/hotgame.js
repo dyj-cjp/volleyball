@@ -1,4 +1,5 @@
 // pages/hotgame/hotgame.js
+const $api = require('../../network/request.js').API;
 var util=require('../../utils/util.js');
 Page({
 
@@ -8,13 +9,7 @@ Page({
   data: {
     navbar: ['全部', '信院','人文','经济','地旅','数院','工商','财税'],
     currentTab: 0,
-    listData:[
-      {"url":"/pages/specificCP/specificCP","team1":"信院男排1队","team2":"经济男排1队","type":"四人排小组赛","time":"2020/02/22 16:00:00","address":"2号场"},
-      {"url":"/pages/index/index","team1":"信院男排1队","team2":"人文男排1队","type":"四人排小组赛","time":"2020/02/23 16:00:00","address":"2号场"},
-      {"url":"/pages/index/index","team1":"信院男排1队","team2":"经济男排1队","type":"四人排小组赛","time":"2020/03/02 16:00:00","address":"2号场"},
-      {"url":"/pages/index/index","team1":"信院男排1队","team2":"经济男排1队","type":"四人排小组赛","time":"2021/04/03 16:00:00","address":"2号场"},
-      {"url":"/pages/index/index","team1":"信院男排1队","team2":"经济男排1队","type":"四人排小组赛","time":"2021/05/22 16:00:00","address":"2号场"}
-      ]
+      listData:[]
   },
   navbarTap: function(e){
     this.setData({
@@ -26,7 +21,7 @@ Page({
       url:"/pages/specificCP/specificCP"
     })
   },
-
+    
   /**
    * 生命周期函数--监听页面加载
    */
@@ -35,6 +30,20 @@ Page({
     this.setData({
       currenTime:currenTime
     });
+    var pagee =this;
+    $api.getAllMatch({  //get请求
+      page:0,
+      size:20
+    }).then(res=>{
+      pagee.setData({
+        listData:res.data.content
+      });
+      console.log("res=>",res.data.content);
+    }).catch(err=>{
+      console.log("err=>",err);
+    });
+
+    
   },
 
   /**

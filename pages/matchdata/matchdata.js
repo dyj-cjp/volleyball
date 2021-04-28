@@ -1,4 +1,5 @@
 // pages/matchdata/matchdata.js
+const $api = require('../../network/request.js').API;
 Page({
 
   /**
@@ -7,18 +8,8 @@ Page({
   data: {
     navbar: ['小组赛', '8强','4强','半决赛','总决赛'],
     currentTab: 0,
-    listData:[
-      {"code":"1","team":"信院男排1队","win":"3","lose":"0","percent":"100%/0.0","add":"9"},
-      {"code":"2","team":"经院男排1队","win":"3","lose":"0","percent":"100%/0.0","add":"9"},
-      {"code":"3","team":"法学男排1队","win":"3","lose":"0","percent":"100%/0.0","add":"9"},
-      {"code":"4","team":"地旅男排1队","win":"3","lose":"0","percent":"100%/0.0","add":"9"}
-      ],
-    listData2:[
-      {"code":"1","team":"信院男排1队","win":"3","lose":"0","percent":"100%/0.0","add":"9"},
-      {"code":"2","team":"经院男排1队","win":"3","lose":"0","percent":"100%/0.0","add":"9"},
-      {"code":"3","team":"法学男排1队","win":"3","lose":"0","percent":"100%/0.0","add":"9"},
-      {"code":"4","team":"地旅男排1队","win":"3","lose":"0","percent":"100%/0.0","add":"9"}
-        ],
+        listDataA:[],
+        listDataB:[]
     
   },
   navbarTap: function(e){
@@ -30,7 +21,36 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    
+    var page =this;
+    $api.getMatchGroup({  //get请求
+      group:"男排A组排行版",
+      game:"小组赛",
+      page:0,
+      size:5
+    }).then(res=>{
+      page.setData({
+        listdataA:res.data.content
+      });
+      console.log("res=>",res.data.content);
+    }).catch(err=>{
+      console.log("err=>",err);
+    });
+    
+    $api.getMatchGroup({  //get请求
+      group:"男排B组排行版",
+      game:"小组赛",
+      page:0,
+      size:5
+    }).then(res=>{
+      page.setData({
+        listdataB:res.data.content
+      });
+      console.log("res=>",res.data.content);
+    }).catch(err=>{
+      console.log("err=>",err);
+    });
+    
   },
 
   /**

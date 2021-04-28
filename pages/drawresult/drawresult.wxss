@@ -1,0 +1,60 @@
+/* pages/drawresult/drawresult.wxss */
+.box{
+  margin:120rpx 120rpx 0 120rpx;
+  background-color:#f5f5f5;
+  height:60vh;
+  border-radius:10px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+}
+.title{
+  font-size:38rpx;
+  color:#D50000;
+  margin:65rpx auto 10rpx auto;
+}
+.line{
+  background-color:#D2D2D2;
+  height:3rpx;
+  margin:10rpx auto;
+  width:200rpx;
+}
+.share{
+  height:80rpx;
+  width:250rpx;
+  background:radial-gradient(#E32F1D 45%,#F46249 70%,#FFD2D2 100%);
+  border-radius:10rem;
+  color:white;
+  border:none;
+  font-size:38rpx;
+  text-align:center;
+  margin:70rpx 230rpx 0 230rpx;
+}
+.tips{
+  font-size:38rpx;
+  color:#D50000;
+  margin:65rpx auto 10rpx auto;
+}
+.count{
+  font-size:28rpx;
+  color:#505050;
+  margin:80rpx auto 80rpx auto;
+}
+.live image{
+  width:120rpx;
+  height:9vh;
+}
+.live{
+  display:flex;
+  font-size:28rpx;
+  color:#505050;
+}
+.live text{
+  margin:0 0rpx 0 40rpx;
+}
+.time{
+  margin:20rpx 20rpx;
+}
+.rat{
+  margin:20rpx 20rpx 0 70rpx;
+}

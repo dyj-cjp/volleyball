@@ -1,24 +1,30 @@
-// pages/wjReviews/wjReviews.js
+// pages/drawing/drawing.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-listData:[
-  {"date":"2020","img":"../images/wj1.png","url":"/pages/2018Reviews/2018Reviews"},
-  {"date":"2019","img":"../images/wj2.png","url":"/pages/2018Reviews/2018Reviews"},
-  {"date":"2018","img":"../images/wj3.png","url":"/pages/2018Reviews/2018Reviews"},
-  {"date":"2017","img":"../images/wj4.png","url":"/pages/2018Reviews/2018Reviews"}
-  ],
-},
+    id:'文字主题1'
+
+  },
+  buttonListener:function(){
+    var that=this
+    wx.navigateTo({
+      url:'../drawresult/drawresult?main='+that.data.id
+    })
+  },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    this.setData({
+      id:options.main,
+    });
 
   },
+  
 
   /**
    * 生命周期函数--监听页面初次渲染完成

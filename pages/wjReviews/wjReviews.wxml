@@ -4,7 +4,7 @@
   <view class="image-parent">
     <view class="Date">{{item.date}}</view>
       <image class="pic" src='{{item.img}}'></image>
-      <navigator class="t" url="{{item.url}}">>>查看详情</navigator>
+      <navigator class="t" url="{{item.url}}?id={{item.date}}" >>>查看详情</navigator>
     </view>
   </block>
 </view>

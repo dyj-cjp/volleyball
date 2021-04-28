@@ -1,0 +1,57 @@
+<!--pages/quan/index.wxml-->
+<!--pages/draw/draw.wxml-->
+<view class='flex-container'>
+  <swiper class='journalBooks' indicator-dots='true'  previous-margin='25rpx' next-margin='45rpx'>
+    <swiper-item class='journalBook'>
+     <view class="box">
+       <text class="title">数字抽签</text>
+       <view class="content">
+         <view class="row">
+           <text class="text-ti">主题</text>
+           <input class="get" placeholder="四人赛男生组抽签" bindinput="inputvalue"/>
+          </view>
+         <view class="row2">
+           <text class="text">参与人数</text>
+           <view class='stepper'>
+              <text bindtap='bindPlus'>+</text>
+              <input value='{{num}}'></input>
+              <text bindtap='bindMinus'>-</text>
+            </view>
+          </view>
+        
+         <view class="row2">
+           <text class="text">选中人数</text>
+           <view class='stepper'>
+              <text bindtap='bindPlus'>+</text>
+              <input value='{{num}}'></input>
+              <text bindtap='bindMinus'>-</text>
+            </view>
+          </view>
+          <view class="gray"></view>
+         <view class="bt" bindtap="buttonListener">创 建</view>
+       </view>
+      </view>
+    </swiper-item>
+    <swiper-item class='journalBook'>
+      <view class="box">
+        <text class="title" >抽签规则</text>
+        <view class="line"></view>
+        <text class="rules">四人赛赛区分组情况如下：
+上半区A、B、C三组共11
+条队 下半区D、E、F三组
+共11条队</text>
+        <view class="line2"></view>
+        <text class="rules">每支队伍队长抽签后会
+在1~22之间随机抓取一
+个数，1~4代表A组，
+5~8代表B组，9~11代表
+C组，12~15代表D组，
+16~19代表E组，20~22
+代表F组</text>
+      </view>
+    </swiper-item>
+  </swiper>
+  <view>
+    <text class="text-cut" style="font-size: 10px;color: #999;">{{address}}</text>
+  </view>
+</view>

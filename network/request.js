@@ -49,6 +49,8 @@ const API={
   getMatchByTeamName: (data) => request(GET, `/api/match/findByName`, data), //根据球队名字来获取相关赛事
   getMatchDataById: (data) => request(GET, `/api/matchData/find`, data), //根据赛事id查询赛事数据
   getMatchGroup: (data) => request(GET, `/api/matchGroup/search`, data), //根据分组和赛事阶段获取统计数据
+  upDateDianZan:(data) => request(GET,`/api/review/updatedianzan`, data), //点赞数修改
+  getMessage: (data) => request(GET, `/api/review/find`, data), //根据哪届来获取信息
 
   //post请求
   addCollegeTeam: (data) => request(POST, `/api/collegeTeam`, data), //院队信息添加
