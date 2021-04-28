@@ -1,12 +1,16 @@
 {
   "pages": [
     "pages/home/index",
+    "pages/teach/index",
     "pages/tainbao/index",
     "pages/xinxi/index",
     "pages/tianjia/index",
+    "pages/tianjiaduiyuan/index",
     "pages/detail/index",
     "pages/quan/index",
     "pages/mine/index",
+    "pages/play/index",
+    "pages/work/index",
     "pages/ssCompetition/ssCompetition",
     "pages/2018Reviews/2018Reviews",
     "pages/matchdata/matchdata",

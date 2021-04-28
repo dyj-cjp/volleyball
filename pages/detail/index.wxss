@@ -1,6 +1,77 @@
 /* pages/detail/index.wxss */
-.teamimg{
+.teamimg {
   width: 672rpx;
   height: 492rpx;
   margin: 40rpx;
+}
+
+.liebiao {
+  float: left;
+  display: flex;
+  margin-left: 50rpx;
+  background-color: #fff;
+}
+
+/* .tit{
+  border-bottom: 2px solid rgb(243, 35, 35);
+} */
+.detail {
+  width: 480rpx;
+  margin-left: 20rpx;
+  font-size: 24rpx;
+}
+
+.nav {
+  top: 140rpx;
+  position: relative;
+}
+
+.nav_t {
+  position: absolute;
+  margin-left: 50rpx;
+  border-bottom: 2px solid rgb(241, 33, 33);
+}
+
+.nav_item {
+  display: flex;
+  margin-left: 50rpx;
+  width: 600rpx;
+  margin-top: 220rpx;
+  margin-bottom: -120rpx;
+  padding:20rpx 30rpx;
+  border-radius: 30rpx;
+  justify-content: space-between;
+  border-bottom: 1px solid rgb(228, 212, 212);
+}
+
+.detailImg {
+  width: 120rpx;
+  height: 120rpx;
+}
+.nickName{
+  width: 100rpx;
+  margin-top: 20rpx;
+  font-size: 28rpx;
+  text-align: center;
+}
+.detailnumber {
+  text-align: center;
+  padding: 20rpx;
+}
+.number{
+  text-align: center;
+  text-align: center;
+  font-size: 24rpx;
+}
+.studyNumber{
+  text-align: center;
+  margin-top: 40rpx;
+
+}
+.position {
+  text-align: center;
+  margin-top: 40rpx;
+  margin-left: 30rpx;
+  width: 100rpx;
+  font-size: 28rpx;
 }

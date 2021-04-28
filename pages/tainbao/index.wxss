@@ -19,9 +19,16 @@ page {
 
 .duiwudetail {
   position: absolute;
+  width: 300rpx;
   top: 180rpx;
   left: 100rpx;
   font-size: 18rpx;
+}
+.duiwudetail textarea{
+  height: 150rpx;
+  width: 200rpx;
+  left: 100rpx;
+  top: -20rpx;
 }
 
 .logo {
@@ -35,7 +42,8 @@ page {
 .logodetail {
   position: absolute;
   top: 180rpx;
-  left: 520rpx;
+  left: 500rpx;
+  text-align: center;
   font-size: 20rpx;
   color: white;
   font-family: STXihei Regular;
@@ -103,9 +111,8 @@ page {
 /* 队员 */
 .show1 {
   width: 678rpx;
-  height: 422rpx;
+  height: 140rpx;
   margin: 35rpx;
-  display: grid;
   background-color: #F5F5F5;
   border-radius: 20rpx;
 }

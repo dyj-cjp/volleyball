@@ -6,6 +6,10 @@ App({
     logs.unshift(Date.now())
     wx.setStorageSync('logs', logs)
 
+
+    wx.setStorageSync('peoplearr', []);
+    wx.setStorageSync('peoplearr1', []);
+    wx.setStorageSync('teamName', []);
     // 登录
     wx.login({
       success: res => {

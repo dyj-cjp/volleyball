@@ -1,19 +1,19 @@
 <!--pages/tianjia/index.wxml-->
 <view class="tianjia">
   <view class="tianjia1">
-    <text>添加队长</text>
+    <text>添加队员</text>
     <image class="close" src="../../images/teamInfomation/close.png"></image>
   </view>
 
   <view class="addx">
     <text>姓名：</text>
-    <input type="text" data-type="name" placeholder="请输入姓名" bindinput="handleInput"></input>
+    <input type="text" data-type="name1" placeholder="请输入姓名" bindinput="handleInput"></input>
   </view>
 
   <view class="addx">
     <text>学号：</text>
-    <input type="text" data-type="number" placeholder="请输入学号" bindinput="handleInput"></input>
+    <input type="text" data-type="number1" placeholder="请输入学号" bindinput="handleInput"></input>
   </view>
   
-  <button class="addsure" bindtap="yess">确定</button>
+  <button class="addsure" bindtap="yes">确定</button>
 </view>

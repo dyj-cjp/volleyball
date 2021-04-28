@@ -1,10 +1,16 @@
-// pages/quan/index.js
+// pages/work/index.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
+    dataList:[
+      {"idindex":1,"title":"你好","datas":"2020/22/33","num":"1/3"},
+      {"idindex":2,"title":"你好","datas":"2020/22/33","num":"1/3"},
+      {"idindex":3,"title":"你好","datas":"2020/22/33","num":"1/3"},
+      {"idindex":4,"title":"你好","datas":"2020/22/33","num":"1/3"},
+    ],
 
   },
 
@@ -12,7 +18,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    
+  
   },
 
   /**

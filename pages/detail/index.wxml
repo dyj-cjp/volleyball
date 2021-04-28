@@ -1,2 +1,35 @@
 <!--pages/detail/index.wxml-->
-<image class="teamimg" src="../../images/teamInfomation/teamImg.png"></image>
+<image class="teamimg" src="{{TeamInfoList.teamImg}}"></image>
+
+<view class="liebiao">
+  <text class="tit">球队简介:</text>
+  <text class="detail">{{TeamInfoList.teamInfo}}</text>
+</view>
+<view class="nav">
+  <view class="nav_t">队长</view>
+</view>
+<view class="nav_item">
+  <view>
+    <image class="detailImg" src="../../images/mine/logo.png"></image>
+  </view>
+  <view class="detailnumber">
+    <view class="nickName">{{numberDetail[0].nickName}}</view>
+    <view class="number">{{numberDetail[0].number}}号</view>
+  </view>
+  <view class="studyNumber">{{numberDetail[0].studyNumber}}</view>
+  <view class="position">{{numberDetail[0].position}}</view>
+</view>
+<view class="nav">
+  <view class="nav_t">队员</view>
+</view>
+<view class="nav_item" wx:if="{{index>0}}" wx:for="{{numberDetail}}" wx:key="studyNumber">
+  <view>
+    <image class="detailImg" src="../../images/mine/logo.png"></image>
+  </view>
+  <view class="detailnumber">
+    <view class="nickName">{{item.nickName}}</view>
+    <view class="number">{{item.number}}号</view>
+  </view>
+  <view class="studyNumber">{{item.studyNumber}}</view>
+  <view class="position">{{item.position}}</view>
+</view>

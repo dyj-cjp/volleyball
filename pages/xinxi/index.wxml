@@ -1,46 +1,30 @@
 <!--pages/xinxi/index.wxml-->
 <view class="navbar">
-  <navigator>信院</navigator>
-  <navigator>法学</navigator>
-  <navigator>人文</navigator>
-  <navigator>经济</navigator>
-  <navigator>地旅</navigator>
-  <navigator>数院</navigator>
-  <navigator>工商</navigator>
-  <navigator>财税</navigator>
-  <navigator>公管</navigator>
+  <view class="nav_c {{1=== currentIndex?'active':''}}" bindtap="activeNav">信院</view>
+  <view class="nav_c {{2=== currentIndex?'active':''}}" bindtap="activeFaxue">法学</view>
+  <view class="nav_c {{3=== currentIndex?'active':''}}" bindtap="activeRenwen">人文</view>
+  <view class="nav_c {{4=== currentIndex?'active':''}}" bindtap="activeJingji">经济</view>
+  <view class="nav_c {{5=== currentIndex?'active':''}}" bindtap="activeDilv">地旅</view>
+  <view class="nav_c {{6=== currentIndex?'active':''}}" bindtap="activeShuyuan">数院</view>
+  <view class="nav_c {{7=== currentIndex?'active':''}}" bindtap="activeGongshang">工商</view>
+  <view class="nav_c {{8=== currentIndex?'active':''}}" bindtap="activeCaisui">财税</view>
+  <view class="nav_c {{9=== currentIndex?'active':''}}" bindtap="activeGongguaun">公管</view>
 </view>
 
 <view class="pic">
-  <image class="pic1" src="../../images/teamInfomation/3.png"></image>
+  <image class="pic1" src="{{CollegeTeamList.collegeImg}}"></image>
   <image class="like" src="../../images/teamInfomation/like.png"></image>
   <view class="renqi">
     <text>人气值</text>
-    <text>118</text>
+    <text>{{CollegeTeamList.popularity}}</text>
   </view>
 </view>
 
 <!-- 队伍列表 -->
 <view class="liebiao">队伍列表</view>
-<view class="duiwu">
-  <navigator class="dui" url="/pages/detail/index">
+<view class="duiwu" wx:for="{{teamList}}" wx:key="teamName">
+  <view class="dui" bindtap="getdetail" data-index="{{item.teamName}}">
     <image src="../../images/teamInfomation/rectangle.png"></image>
-    <text class="duitxt">信院男排1队</text>
-  </navigator>
-  <navigator class="dui">
-    <image src="../../images/teamInfomation/rectangle.png"></image>
-    <text class="duitxt">信院男排2队</text>
-  </navigator>
-  <navigator class="dui">
-    <image src="../../images/teamInfomation/rectangle.png"></image>
-    <text class="duitxt">信院男排3队</text>
-  </navigator>
-  <navigator class="dui">
-    <image src="../../images/teamInfomation/rectangle.png"></image>
-    <text class="duitxt">信院女排1队</text>
-  </navigator>
-  <navigator class="dui">
-    <image src="../../images/teamInfomation/rectangle.png"></image>
-    <text class="duitxt">信院女排2队</text>
-  </navigator>
+    <text class="duitxt">{{item.teamName}}</text>
+  </view>
 </view>

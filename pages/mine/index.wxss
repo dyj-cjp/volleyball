@@ -1,1 +1,78 @@
 /* pages/mine/index.wxss */
+.nickbgc{
+  height: 160px;
+  background-color:#E32F1D;
+}
+.btn-login{
+padding-top: 100rpx;
+}
+.userinfo-face{
+  margin-left: 100rpx;
+  margin-top: 50rpx;
+  margin-right: 30rpx;
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 60rpx;
+}
+.userinfo-nickname{
+  display: inline-block;
+  position: relative;
+  bottom: 60rpx;
+  color:white;
+}
+.nav_tap{
+  height: 300rpx;
+  width: 480rpx;
+  margin-top: 100rpx;
+  margin-left: 100rpx;
+  padding: 50rpx;
+  border: 1rpx solid #e9e4e4;
+  box-shadow: #eee9e9 2rpx 2rpx;
+  border-radius: 30rpx;
+
+}
+.nav_img{
+  border-bottom: 1rpx solid rgb(241, 232, 232);
+
+}
+.img{
+  width: 75rpx;
+  height: 75rpx;
+}
+image{
+  margin: 10rpx 0rpx;
+}
+text{
+  position: relative;
+  bottom: 40rpx;
+  left: 20rpx;
+  color:#505050;
+  font-size: 28rpx;
+}
+
+
+
+
+
+
+
+
+
+
+/* .nickname{
+  font-size:30rpx;
+  color: #3e3e3e;
+  font-weight: bold;
+  margin-top:5rpx;
+}
+.addimg{
+  width:154rpx;
+  height:154rpx;
+  background-color: rgba(0,0,0,.2);
+  border-radius:50%;
+  overflow:hidden;
+}
+.faceimg{
+  width:154rpx;
+  height:154rpx;
+} */

@@ -4,7 +4,7 @@
     "ignore": []
   },
   "setting": {
-    "urlCheck": true,
+    "urlCheck": false,
     "es6": true,
     "enhance": false,
     "postcss": true,
@@ -21,8 +21,9 @@
     "checkSiteMap": true,
     "uploadWithSourceMap": true,
     "compileHotReLoad": false,
-    "useMultiFrameRuntime": false,
+    "useMultiFrameRuntime": true,
     "useApiHook": true,
+    "useApiHostProcess": false,
     "babelSetting": {
       "ignore": [],
       "disablePlugins": [],
@@ -40,7 +41,7 @@
   },
   "compileType": "miniprogram",
   "libVersion": "2.16.0",
-  "appid": "wx23d2501ee1423a88",
+  "appid": "wx5816707d2ed8c621",
   "projectname": "volleyball",
   "debugOptions": {
     "hidedInDevtools": []
@@ -54,16 +55,10 @@
   "simulatorType": "wechat",
   "simulatorPluginLibVersion": {},
   "condition": {
-    "search": {
-      "list": []
-    },
-    "conversation": {
+    "plugin": {
       "list": []
     },
     "game": {
-      "list": []
-    },
-    "plugin": {
       "list": []
     },
     "gamePlugin": {
@@ -92,6 +87,48 @@
         {
           "name": "pages/xinxi/index",
           "pathName": "pages/xinxi/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/detail/index",
+          "pathName": "pages/detail/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/tainbao/index",
+          "pathName": "pages/tainbao/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/xinxi/index",
+          "pathName": "pages/xinxi/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/mine/index",
+          "pathName": "pages/mine/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/play/index",
+          "pathName": "pages/play/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/work/index",
+          "pathName": "pages/work/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/teach/index",
+          "pathName": "pages/teach/index",
           "query": "",
           "scene": null
         },

@@ -1,20 +1,22 @@
 // pages/tianjia/index.js
+const $api = require('../../network/request.js').API;
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    name:'',
-    number:'',
+    name:null,
+     number:null
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+
   },
+  
   handleInput(event){
     let type = event.currentTarget.dataset.type;
     this.setData({
@@ -22,15 +24,13 @@ Page({
     })
   },
 
-  yes(){
-    let {name,number} = this.data;
-    wx.showToast({
-      title: '添加成功'
-    })
-    //将信息添加到本地
-    wx.setStorageSync('userInfo', JSON.stringify({name,number}))
+  yess(){
+    var obj1={name:this.data.name,number:this.data.number}
+    var arr1=wx.getStorageSync('peoplearr1');
+    arr1.push(obj1);
+    wx.setStorageSync('peoplearr1', arr1)
     //跳转到队伍填报页面
-      wx-wx.navigateTo({
+      wx.navigateBack({
         url:'/pages/tainbao/index'
       })
   },

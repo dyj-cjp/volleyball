@@ -34,13 +34,15 @@ page{
   width: 605rpx;
   height: 370rpx;
   background: #ffffff;
-  border-radius: 11rpx;
+  border-radius: 31rpx;
   margin-top:120rpx;
   margin-bottom:30rpx;
   margin-left: 74rpx;
   position: absolute;
   z-index: 2;
+  overflow: hidden;
 }
+
 .main{
   position: relative;
   /* position: fixed; */

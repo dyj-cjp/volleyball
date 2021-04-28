@@ -7,7 +7,7 @@
 <image class="icon1" src="../../images/homeImg/volleyball.png"></image>
 <!-- 轮播图 -->
 <view class="navbgc">
-  <swiper autoplay indicator-dots circual>
+  <swiper autoplay indicator-dots circular="true">
     <swiper-item>
       <image mode="widthFix" src="../../images/homeImg/1.png"></image>
     </swiper-item>
@@ -34,7 +34,7 @@
   </navigator>
 
   <view class="main1">
-    <navigator class="main11">
+    <navigator class="main11" url="/pages/teach/index">
       <image class="jiaoxue" src="../../images/homeImg/teach.png">
         <view class="txt">排球教学</view>
       </image>
