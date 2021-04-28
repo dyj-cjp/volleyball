@@ -1,10 +1,16 @@
-// pages/quan/index.js
+// pages/drawresult/drawresult.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
+    sum:12,
+    yes:1,
+    no:0,
+    lucky:6,
+    tips:"恭喜抽中啦！",
+    main:'文字主题'
 
   },
 
@@ -12,6 +18,9 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    this.setData({
+      main:options.main,
+    });
 
   },
 

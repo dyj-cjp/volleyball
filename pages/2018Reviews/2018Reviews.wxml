@@ -15,10 +15,10 @@
         <view class="item7">
           <image class="itempic" src="{{item.img}}"></image>
           <view class="buttonbox">
-            <view class="date">{{item.date}}</view>
+            <view class="date">{{item.imgtime}}</view>
             <view class="little">
-              <image class="zan" src="../images/nozan.png"></image> <!--点赞图片-->
-              <view class="count">{{item.count}}</view>
+              <image class="zan" src="../images/nozan.png" ></image> <!--点赞图片-->
+              <view class="count">{{item.imglike}}</view>
             </view>
          </view>
         </view>
@@ -30,10 +30,10 @@
         <view class="item7">
           <image class="itempic" src="{{item.img}}"></image>
           <view class="buttonbox">
-            <view class="date">{{item.date}}</view>
-          <view class="little"> 
-             <image class="zan" src="../images/nozan.png"></image> 
-              <view class="count">{{item.count}}</view>
+            <view class="date">{{item.imgtime}}</view>
+            <view class="little" >
+              <image class="zan" src="../images/nozan.png"  bindtap="addzan" data-id="{{item.id}}" data-count="{{item.imglike}}" data-if="1"></image> <!--点赞图片-->
+              <view class="count">{{item.imglike}}</view>
             </view>
          </view>
         </view>
@@ -42,7 +42,7 @@
       </view>
     </scroll-view>
       
-       <view class="orange" bindtap="chooseSource">
+       <view class="orange" bindtap="addpic">
          <image src="../images/add.png"></image>
        </view>
     
@@ -50,6 +50,5 @@
  
 <!--精彩集锦-->
 <view hidden="{{currentTab!==2}}">
-  
 </view>
 </view>

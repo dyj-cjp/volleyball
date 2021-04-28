@@ -5,7 +5,7 @@
     "pages/xinxi/index",
     "pages/tianjia/index",
     "pages/detail/index",
-    "pages/quan/index",
+    "pages/draw/draw",
     "pages/mine/index",
     "pages/ssCompetition/ssCompetition",
     "pages/2018Reviews/2018Reviews",
@@ -13,7 +13,9 @@
     "pages/specificCP/specificCP",
     "pages/hotgame/hotgame",
     "pages/wjReviews/wjReviews",
-    "pages/index/index"
+    "pages/index/index",
+    "pages/drawing/drawing",
+    "pages/drawresult/drawresult"
   ],
   "window": {
     "backgroundTextStyle":"light",
@@ -29,8 +31,8 @@
       "selectedIconPath": "./images/homeImg/homeActive.png"
     },
     {
-      "pagePath": "pages/quan/index",
-      "text": "动态",
+      "pagePath": "pages/draw/draw",
+      "text": "抽签",
       "iconPath": "./images/homeImg/quan.png",
       "selectedIconPath": "./images/homeImg/quanActive.png"
     },

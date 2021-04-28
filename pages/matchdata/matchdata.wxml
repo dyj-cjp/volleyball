@@ -15,14 +15,14 @@
  <view class="th ">积分</view>
  </view>
  <view class="littleline"></view>
- <block wx:for="{{listData}}" wx:key="{[code]}">
+ <block wx:for="{{listdataA}}" wx:key="{[id]}">
  <view class="tr bg-g">
-<view class="td2 o-o" wx:if="{{index== 0||index==1}}">{{item.code}}</view>
-<view class="td2" wx:else>{{item.code}}</view>
- <view class="td1">{{item.team}}</view>
- <view class="td">{{item.win}}-{{item.lose}}</view>
- <view class="td">{{item.percent}}</view>
- <view class="td">{{item.add}}</view>
+<view class="td2 o-o" wx:if="{{index== 0||index==1}}">{{item.matchgrouprange}}</view>
+<view class="td2" wx:else>{{item.matchgrouprange}}</view>
+ <view class="td1">{{item.matchgroupteamname}}</view>
+ <view class="td">{{item.matchgroupwinlose}}</view>
+ <view class="td">{{item.matchgroupwinrate}}</view>
+ <view class="td">{{item.matchgroupscore}}</view>
  </view>
  <view class="littleline"></view>
  </block>
@@ -37,14 +37,14 @@
  <view class="th ">积分</view>
  </view>
  <view class="littleline"></view>
- <block wx:for="{{listData2}}" wx:key="{[code]}">
+ <block wx:for="{{listdataB}}" wx:key="{[id]}">
  <view class="tr bg-g">
-<view class="td2 o-o" wx:if="{{index== 0||index==1}}">{{item.code}}</view>
-<view class="td2" wx:else>{{item.code}}</view>
- <view class="td1">{{item.team}}</view>
- <view class="td">{{item.win}}-{{item.lose}}</view>
- <view class="td">{{item.percent}}</view>
- <view class="td">{{item.add}}</view>
+<view class="td2 o-o" wx:if="{{index== 0||index==1}}">{{item.matchgrouprange}}</view>
+<view class="td2" wx:else>{{item.matchgrouprange}}</view>
+ <view class="td1">{{item.matchgroupteamname}}</view>
+ <view class="td">{{item.matchgroupwinlose}}</view>
+ <view class="td">{{item.matchgroupwinrate}}</view>
+ <view class="td">{{item.matchgroupscore}}</view>
  </view>
  <view class="littleline"></view>
  </block>

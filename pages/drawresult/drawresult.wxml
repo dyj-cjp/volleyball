@@ -1,0 +1,19 @@
+<!--pages/drawresult/drawresult.wxml-->
+<view class="box">
+  <text class="title">{{main}}</text>
+  <view class="line"></view>
+  <view class="tips">{{tips}}</view>
+  <text class="count">{{yes+no}}/{{sum}}张卡片 {{yes}}/{{lucky}}个幸运儿被选中</text>
+  <view class="live">
+    <image src="../images/team.png"></image>
+    <view class="he">
+      <text>用户名称</text>
+      <view class="time">2021-04-01</view>
+    </view>
+    <view class="he">
+      <text>抓中了</text>
+      <view class="rat">8</view>
+    </view>
+  </view>
+</view>
+<button class="share" open-type='share'>分享给好友</button>

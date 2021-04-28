@@ -12,18 +12,18 @@
  <view hidden="{{currentTab!==0}}">
   <view class="table">
  <block wx:for="{{listData}}">
- <navigator class="tr" url="{{item.url}}">
+ <navigator class="tr" url="/pages/specificCP/specificCP?idd={{item.id}}&t1={{item.aname}}&t2={{item.bname}}">
    <view class="item4">
-   <image class="team" src="../images/team.png"></image>
-   <view class="name">{{item.team1}}</view>
+   <image class="team" src="{{item.aimg}}"></image>
+   <view class="name">{{item.aname}}</view>
   </view>
   <view class="item4">
     <view class="logo_text">
        <view class="two">
-    <view class="text">{{item.type}}</view>
+    <view class="text">{{item.stage}}</view>
     <view class="text">{{item.time}}</view>
        </view>
-       <view wx:if="{{currenTime>item.time}}">
+       <view wx:if="{{item.time<currenTime}}">
         <image class="logo" src="../images/over.png"></image>
        </view>
    <view wx:else>
@@ -32,11 +32,11 @@
     
   </view>
     <image class="vs" src="../images/vs.png"></image>
-    <view class="text">{{item.address}}</view>
+    <view class="text">{{item.place}}</view>
   </view>
  <view class="item4">
- <image class="team" src="../images/team.png"></image>
- <view class="name">{{item.team2}}</view>
+ <image class="team" src="{{item.bimg}}"></image>
+ <view class="name">{{item.bname}}</view>
 </view>
  </navigator>
  </block>
@@ -46,16 +46,16 @@
  <view hidden="{{currentTab!==1}}">
   <view class="table">
  <block wx:for="{{listData}}">
-<view wx:if="{{indexofStr.includes(item.team2,'信院') > -1||indexofStr.includes(item.team1,'信院') > -1}}">
- <navigator class="tr" url="{{item.url}}">
+<view wx:if="{{item.acollege=='信院'||item.bcollege=='信院'}}">
+<navigator class="tr" url="/pages/specificCP/specificCP?idd={{item.id}}&t1={{item.aname}}&t2={{item.bname}}">
    <view class="item4">
-   <image class="team" src="../images/team.png"></image>
-   <view class="name">{{item.team1}}</view>
+   <image class="team" src="{{item.aimg}}"></image>
+   <view class="name">{{item.aname}}</view>
   </view>
   <view class="item4">
     <view class="logo_text">
        <view class="two">
-    <view class="text">{{item.type}}</view>
+    <view class="text">{{item.stage}}</view>
     <view class="text">{{item.time}}</view>
        </view>
        <view wx:if="{{currenTime>item.time}}">
@@ -67,11 +67,11 @@
     
   </view>
     <image class="vs" src="../images/vs.png"></image>
-    <view class="text">{{item.address}}</view>
+    <view class="text">{{item.place}}</view>
   </view>
  <view class="item4">
- <image class="team" src="../images/team.png"></image>
- <view class="name">{{item.team2}}</view>
+ <image class="team" src="{{item.bimg}}"></image>
+ <view class="name">{{item.bname}}</view>
 </view>
  </navigator>
 </view>
@@ -82,16 +82,16 @@
  <view hidden="{{currentTab!==2}}">
   <view class="table">
  <block wx:for="{{listData}}">
-<view wx:if="{{indexofStr.includes(item.team2,'人文') > -1||indexofStr.includes(item.team1,'人文') > -1}}">
- <navigator class="tr" url="{{item.url}}">
+<view wx:if="{{item.acollege=='人文'||item.bcollege=='人文'}}">
+  <navigator class="tr" url="/pages/specificCP/specificCP?idd={{item.id}}&t1={{item.aname}}&t2={{item.bname}}">
    <view class="item4">
-   <image class="team" src="../images/team.png"></image>
-   <view class="name">{{item.team1}}</view>
+   <image class="team" src="{{item.aimg}}"></image>
+   <view class="name">{{item.aname}}</view>
   </view>
   <view class="item4">
     <view class="logo_text">
        <view class="two">
-    <view class="text">{{item.type}}</view>
+    <view class="text">{{item.stage}}</view>
     <view class="text">{{item.time}}</view>
        </view>
        <view wx:if="{{currenTime>item.time}}">
@@ -103,31 +103,32 @@
     
   </view>
     <image class="vs" src="../images/vs.png"></image>
-    <view class="text">{{item.address}}</view>
+    <view class="text">{{item.place}}</view>
   </view>
  <view class="item4">
- <image class="team" src="../images/team.png"></image>
- <view class="name">{{item.team2}}</view>
+ <image class="team" src="{{item.bimg}}"></image>
+ <view class="name">{{item.bname}}</view>
 </view>
  </navigator>
 </view>
  </block>
 </view>
+   
    </view>
    <!--经济-->
  <view hidden="{{currentTab!==3}}">
   <view class="table">
  <block wx:for="{{listData}}">
-<view wx:if="{{indexofStr.includes(item.team2,'经济') > -1||indexofStr.includes(item.team1,'经济') > -1}}">
- <navigator class="tr" url="{{item.url}}">
+<view wx:if="{{item.acollege=='经济'||item.bcollege=='经济'}}">
+  <navigator class="tr" url="/pages/specificCP/specificCP?idd={{item.id}}&t1={{item.aname}}&t2={{item.bname}}">
    <view class="item4">
-   <image class="team" src="../images/team.png"></image>
-   <view class="name">{{item.team1}}</view>
+   <image class="team" src="{{item.aimg}}"></image>
+   <view class="name">{{item.aname}}</view>
   </view>
   <view class="item4">
     <view class="logo_text">
        <view class="two">
-    <view class="text">{{item.type}}</view>
+    <view class="text">{{item.stage}}</view>
     <view class="text">{{item.time}}</view>
        </view>
        <view wx:if="{{currenTime>item.time}}">
@@ -139,11 +140,11 @@
     
   </view>
     <image class="vs" src="../images/vs.png"></image>
-    <view class="text">{{item.address}}</view>
+    <view class="text">{{item.place}}</view>
   </view>
  <view class="item4">
- <image class="team" src="../images/team.png"></image>
- <view class="name">{{item.team2}}</view>
+ <image class="team" src="{{item.bimg}}"></image>
+ <view class="name">{{item.bname}}</view>
 </view>
  </navigator>
 </view>
@@ -154,16 +155,16 @@
  <view hidden="{{currentTab!==4}}">
   <view class="table">
  <block wx:for="{{listData}}">
-<view wx:if="{{indexofStr.includes(item.team2,'地旅') > -1||indexofStr.includes(item.team1,'地旅') > -1}}">
- <navigator class="tr" url="{{item.url}}">
+<view wx:if="{{item.acollege=='地旅'||item.bcollege=='地旅'}}">
+  <navigator class="tr" url="/pages/specificCP/specificCP?idd={{item.id}}&t1={{item.aname}}&t2={{item.bname}}">
    <view class="item4">
-   <image class="team" src="../images/team.png"></image>
-   <view class="name">{{item.team1}}</view>
+   <image class="team" src="{{item.aimg}}"></image>
+   <view class="name">{{item.aname}}</view>
   </view>
   <view class="item4">
     <view class="logo_text">
        <view class="two">
-    <view class="text">{{item.type}}</view>
+    <view class="text">{{item.stage}}</view>
     <view class="text">{{item.time}}</view>
        </view>
        <view wx:if="{{currenTime>item.time}}">
@@ -175,11 +176,11 @@
     
   </view>
     <image class="vs" src="../images/vs.png"></image>
-    <view class="text">{{item.address}}</view>
+    <view class="text">{{item.place}}</view>
   </view>
  <view class="item4">
- <image class="team" src="../images/team.png"></image>
- <view class="name">{{item.team2}}</view>
+ <image class="team" src="{{item.bimg}}"></image>
+ <view class="name">{{item.bname}}</view>
 </view>
  </navigator>
 </view>
@@ -190,16 +191,16 @@
  <view hidden="{{currentTab!==5}}">
   <view class="table">
  <block wx:for="{{listData}}">
-<view wx:if="{{indexofStr.includes(item.team2,'数院') > -1||indexofStr.includes(item.team1,'数院') > -1}}">
- <navigator class="tr" url="{{item.url}}">
+<view wx:if="{{item.acollege=='数院'||item.bcollege=='数院'}}">
+  <navigator class="tr" url="/pages/specificCP/specificCP?idd={{item.id}}&t1={{item.aname}}&t2={{item.bname}}">
    <view class="item4">
-   <image class="team" src="../images/team.png"></image>
-   <view class="name">{{item.team1}}</view>
+   <image class="team" src="{{item.aimg}}"></image>
+   <view class="name">{{item.aname}}</view>
   </view>
   <view class="item4">
     <view class="logo_text">
        <view class="two">
-    <view class="text">{{item.type}}</view>
+    <view class="text">{{item.stage}}</view>
     <view class="text">{{item.time}}</view>
        </view>
        <view wx:if="{{currenTime>item.time}}">
@@ -211,11 +212,11 @@
     
   </view>
     <image class="vs" src="../images/vs.png"></image>
-    <view class="text">{{item.address}}</view>
+    <view class="text">{{item.place}}</view>
   </view>
  <view class="item4">
- <image class="team" src="../images/team.png"></image>
- <view class="name">{{item.team2}}</view>
+ <image class="team" src="{{item.bimg}}"></image>
+ <view class="name">{{item.bname}}</view>
 </view>
  </navigator>
 </view>
@@ -226,16 +227,16 @@
  <view hidden="{{currentTab!==6}}">
   <view class="table">
  <block wx:for="{{listData}}">
-<view wx:if="{{indexofStr.includes(item.team2,'工商') > -1||indexofStr.includes(item.team1,'工商') > -1}}">
- <navigator class="tr" url="{{item.url}}">
+<view wx:if="{{item.acollege=='工商'||item.bcollege=='工商'}}">
+  <navigator class="tr" url="/pages/specificCP/specificCP?idd={{item.id}}&t1={{item.aname}}&t2={{item.bname}}">
    <view class="item4">
-   <image class="team" src="../images/team.png"></image>
-   <view class="name">{{item.team1}}</view>
+   <image class="team" src="{{item.aimg}}"></image>
+   <view class="name">{{item.aname}}</view>
   </view>
   <view class="item4">
     <view class="logo_text">
        <view class="two">
-    <view class="text">{{item.type}}</view>
+    <view class="text">{{item.stage}}</view>
     <view class="text">{{item.time}}</view>
        </view>
        <view wx:if="{{currenTime>item.time}}">
@@ -247,11 +248,11 @@
     
   </view>
     <image class="vs" src="../images/vs.png"></image>
-    <view class="text">{{item.address}}</view>
+    <view class="text">{{item.place}}</view>
   </view>
  <view class="item4">
- <image class="team" src="../images/team.png"></image>
- <view class="name">{{item.team2}}</view>
+ <image class="team" src="{{item.bimg}}"></image>
+ <view class="name">{{item.bname}}</view>
 </view>
  </navigator>
 </view>
@@ -262,16 +263,16 @@
  <view hidden="{{currentTab!==7}}">
   <view class="table">
  <block wx:for="{{listData}}">
-<view wx:if="{{indexofStr.includes(item.team2,'财税') > -1||indexofStr.includes(item.team1,'财税') > -1}}">
- <navigator class="tr" url="{{item.url}}">
+<view wx:if="{{item.acollege=='财税'||item.bcollege=='财税'}}">
+  <navigator class="tr" url="/pages/specificCP/specificCP?idd={{item.id}}&t1={{item.aname}}&t2={{item.bname}}">
    <view class="item4">
-   <image class="team" src="../images/team.png"></image>
-   <view class="name">{{item.team1}}</view>
+   <image class="team" src="{{item.aimg}}"></image>
+   <view class="name">{{item.aname}}</view>
   </view>
   <view class="item4">
     <view class="logo_text">
        <view class="two">
-    <view class="text">{{item.type}}</view>
+    <view class="text">{{item.stage}}</view>
     <view class="text">{{item.time}}</view>
        </view>
        <view wx:if="{{currenTime>item.time}}">
@@ -283,11 +284,11 @@
     
   </view>
     <image class="vs" src="../images/vs.png"></image>
-    <view class="text">{{item.address}}</view>
+    <view class="text">{{item.place}}</view>
   </view>
  <view class="item4">
- <image class="team" src="../images/team.png"></image>
- <view class="name">{{item.team2}}</view>
+ <image class="team" src="{{item.bimg}}"></image>
+ <view class="name">{{item.bname}}</view>
 </view>
  </navigator>
 </view>
