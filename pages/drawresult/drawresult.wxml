@@ -3,17 +3,19 @@
   <text class="title">{{main}}</text>
   <view class="line"></view>
   <view class="tips">{{tips}}</view>
-  <text class="count">{{yes+no}}/{{sum}}张卡片 {{yes}}/{{lucky}}个幸运儿被选中</text>
+  <text class="count">{{drawpeople}}/{{totalnum}}张卡片 {{selectednum}}/{{selectnum}}个幸运儿被选中</text>
+<view wx:for="{{drawArr}}">
   <view class="live">
-    <image src="../images/team.png"></image>
+    <image src="{{item.faceurl}}"></image>
     <view class="he">
       <text>用户名称</text>
-      <view class="time">2021-04-01</view>
+      <view class="time">{{item.time}}</view>
     </view>
     <view class="he">
       <text>抓中了</text>
-      <view class="rat">8</view>
+      <view class="rat">{{item.number}}</view>
     </view>
   </view>
+</view>
 </view>
 <button class="share" open-type='share'>分享给好友</button>

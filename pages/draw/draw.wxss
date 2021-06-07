@@ -48,15 +48,17 @@
   border-radius:10rpx;
 }
 .text-ti{
-  position:absolute;
+  /* position:absolute; */
   background:#f5f5f5;
-  margin:-25rpx 0 0 10rpx;
-  padding:0 5rpx;
+  line-height:86rpx;
+  /* margin:-25rpx 0 0 10rpx; */
+  margin-left: 5rpx;
+  /* padding:0 5rpx; */
   color:#F46249;
 }
 .get{
-  margin:15rpx 0 0 90rpx;
-  line-height:90rpx;
+  margin:18rpx 0 0 20rpx;
+  line-height:86rpx;
   color:#505050;
   font-size:28rpx;
 }
@@ -93,7 +95,7 @@
   text-align:center;
   color:#505050;
 }
-.stepper input{
+.stepper .totaltext{
   width:40px;
   height:26px;
   float:left;
@@ -102,6 +104,7 @@
   font-size:12px;
   border-left:1px solid #ccc;
   border-right:1px solid #ccc;
+  color: red;
   
 }
 .gray{

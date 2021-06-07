@@ -26,7 +26,7 @@ page{
   display: block;
   position: absolute;
   bottom: 0;
-  left: 35rpx;
+  left: 90rpx;
   right: 0rpx;
   height: 7rpx;
   background: #F55438;
@@ -106,3 +106,34 @@ page{
   height:85vh;
 }
 
+.man{
+  font-size:48rpx;
+  color:rgba(199,88,88);
+  font-weight:bold;
+  margin-top:20rpx;
+  margin-left:40rpx;
+}
+.item{
+  width:85vw;
+  margin: 0 auto;
+}
+.text{
+  width:400rpx;
+  margin:0 auto;
+  text-align:center;
+  font-size:36rpx;
+  font-weight:bold;
+  margin-top:50rpx;
+  margin-bottom:30rpx;
+}
+.imgdetail{
+  width:100%;
+}
+.woman{
+  font-size:48rpx;
+  color:rgba(199,88,88);
+  font-weight:bold;
+  margin-top:20rpx;
+  padding-left:40rpx;
+  border-top:2vh solid #C9C9C9;
+}

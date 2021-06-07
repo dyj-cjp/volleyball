@@ -36,7 +36,7 @@ page{
 .back{
   background-color:#F7F7F7;
   height:100%;
-  border-top:2vh solid #C9C9C9;
+  /* border-top:2vh solid #C9C9C9; */
   
 }
 .box{
@@ -133,8 +133,8 @@ page{
   justify-content:space-between;
   font-size:30rpx;
   color:#505050;
-  height:6.5vh;
-  line-height:6.5vh;
+  height:10.5vh;
+  line-height:10.5vh;
 }
 .buttonbox1{
   background:#FFFFFF;

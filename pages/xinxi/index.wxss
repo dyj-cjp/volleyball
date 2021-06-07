@@ -2,6 +2,7 @@
 page{
   background-color: #E5E5E5;
 }
+
 /* 导航栏 */
 .navbar{
   display: flex;
@@ -68,4 +69,18 @@ page{
   margin-left: 80rpx;
   font-size: 30rpx;
   color: #8F8F8F;
+}
+.chuanjian{
+  position:fixed;
+  bottom:5vw;
+  width:400rpx;
+  height:100rpx;
+  border-radius:100rpx;
+  background-color:rgba(233,55,55);
+  color:white;
+  text-align:center;
+  left:50%;
+  transform: translate(-50%,0);
+  line-height:100rpx;
+  font-weight:bold;
 }

@@ -6,10 +6,13 @@ Page({
    * 页面的初始数据
    */
   data: {
-    navbar: ['小组赛', '8强','4强','半决赛','总决赛'],
+    navbar: ['小组赛', '8强','4强','总决赛'],
     currentTab: 0,
         listDataA:[],
-        listDataB:[]
+        listDataB:[],
+        listData8:[],
+        listData4:[],
+        listzong:[]
     
   },
   navbarTap: function(e){
@@ -50,6 +53,50 @@ Page({
     }).catch(err=>{
       console.log("err=>",err);
     });
+
+    $api.getMatchGroup({  //get请求
+      group:"男组8强",
+      game:"8强",
+      page:0,
+      size:8
+    }).then(res=>{
+      page.setData({
+        listdata8:res.data.content
+      });
+      console.log("res=>",res.data.content);
+    }).catch(err=>{
+      console.log("err=>",err);
+    });
+
+    $api.getMatchGroup({  //get请求
+      group:"男组4强",
+      game:"4强",
+      page:0,
+      size:4
+    }).then(res=>{
+      page.setData({
+        listdata4:res.data.content
+      });
+      console.log("res=>",res.data.content);
+    }).catch(err=>{
+      console.log("err=>",err);
+    });
+
+    $api.getMatchGroup({  //get请求
+      group:"男组决赛",
+      game:"决赛",
+      page:0,
+      size:2
+    }).then(res=>{
+      page.setData({
+        listzong:res.data.content
+      });
+      console.log("res=>",res.data.content);
+    }).catch(err=>{
+      console.log("err=>",err);
+    });
+
+
     
   },
 

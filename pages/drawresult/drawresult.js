@@ -1,16 +1,19 @@
 // pages/drawresult/drawresult.js
+const $api = require('../../network/request.js').API;
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    sum:12,
-    yes:1,
-    no:0,
-    lucky:6,
     tips:"恭喜抽中啦！",
-    main:'文字主题'
+    main:'',
+    createopenid:null,
+    totalnum:null,
+    selectnum:null,
+    selectednum:null,
+    drawpeople:null,
+    drawArr:null,
 
   },
 
@@ -18,9 +21,47 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    var that=this;
+    let dataArr = options.main.split(',');
+    console.log(dataArr[0]);
+    console.log(dataArr[1]);
+
     this.setData({
-      main:options.main,
+      main:dataArr[0],
+      createopenid:dataArr[1]
     });
+
+    $api.getDrawResult({
+      a:that.data.createopenid,
+      b:that.data.main
+    }).then(res=>{
+      console.log("res=>",res);
+      that.setData({
+        totalnum: res.data.totalnum,
+        selectnum: res.data.selectnum,
+        selectednum: res.data.selectednum,
+        drawpeople: res.data.drawpeople,
+
+      })
+    }).catch(err=>{
+      console.log("err=>",err);
+    })
+
+    $api.getProcess({
+      a:that.data.createopenid,
+      b:that.data.main,
+      page:0,
+      size:20,
+    }).then(res=>{
+      console.log("res=>",res);
+      that.setData({
+        drawArr: res.data.content
+      })
+    }).catch(err=>{
+      console.log("err=>",err);
+    })
+
+
 
   },
 

@@ -49,17 +49,165 @@
  <view class="littleline"></view>
  </block>
 </view>
+
+<view class="table">
+ <view class="tr">
+<view class="th2"></view>
+ <view class="th1">男组C组排行榜</view>
+ <view class="th">胜-负</view>
+ <view class="th ">胜率/胜赛场</view>
+ <view class="th ">积分</view>
+ </view>
+ <view class="littleline"></view>
+ <block wx:for="{{listdataB}}" wx:key="{[id]}">
+ <view class="tr bg-g">
+<view class="td2 o-o" wx:if="{{index== 0||index==1}}">{{item.matchgrouprange}}</view>
+<view class="td2" wx:else>{{item.matchgrouprange}}</view>
+ <view class="td1">{{item.matchgroupteamname}}</view>
+ <view class="td">{{item.matchgroupwinlose}}</view>
+ <view class="td">{{item.matchgroupwinrate}}</view>
+ <view class="td">{{item.matchgroupscore}}</view>
+ </view>
+ <view class="littleline"></view>
+ </block>
+</view>
+
+<view class="table">
+ <view class="tr">
+<view class="th2"></view>
+ <view class="th1">男组D组排行榜</view>
+ <view class="th">胜-负</view>
+ <view class="th ">胜率/胜赛场</view>
+ <view class="th ">积分</view>
+ </view>
+ <view class="littleline"></view>
+ <block wx:for="{{listdataB}}" wx:key="{[id]}">
+ <view class="tr bg-g">
+<view class="td2 o-o" wx:if="{{index== 0||index==1}}">{{item.matchgrouprange}}</view>
+<view class="td2" wx:else>{{item.matchgrouprange}}</view>
+ <view class="td1">{{item.matchgroupteamname}}</view>
+ <view class="td">{{item.matchgroupwinlose}}</view>
+ <view class="td">{{item.matchgroupwinrate}}</view>
+ <view class="td">{{item.matchgroupscore}}</view>
+ </view>
+ <view class="littleline"></view>
+ </block>
+</view>
+
+<!-- <view class="table">
+ <view class="tr">
+<view class="th2"></view>
+ <view class="th1">男组E组排行榜</view>
+ <view class="th">胜-负</view>
+ <view class="th ">胜率/胜赛场</view>
+ <view class="th ">积分</view>
+ </view>
+ <view class="littleline"></view>
+ <block wx:for="{{listdataB}}" wx:key="{[id]}">
+ <view class="tr bg-g">
+<view class="td2 o-o" wx:if="{{index== 0||index==1}}">{{item.matchgrouprange}}</view>
+<view class="td2" wx:else>{{item.matchgrouprange}}</view>
+ <view class="td1">{{item.matchgroupteamname}}</view>
+ <view class="td">{{item.matchgroupwinlose}}</view>
+ <view class="td">{{item.matchgroupwinrate}}</view>
+ <view class="td">{{item.matchgroupscore}}</view>
+ </view>
+ <view class="littleline"></view>
+ </block>
+</view>
+
+<view class="table">
+ <view class="tr">
+<view class="th2"></view>
+ <view class="th1">男组F组排行榜</view>
+ <view class="th">胜-负</view>
+ <view class="th ">胜率/胜赛场</view>
+ <view class="th ">积分</view>
+ </view>
+ <view class="littleline"></view>
+ <block wx:for="{{listdataB}}" wx:key="{[id]}">
+ <view class="tr bg-g">
+<view class="td2 o-o" wx:if="{{index== 0||index==1}}">{{item.matchgrouprange}}</view>
+<view class="td2" wx:else>{{item.matchgrouprange}}</view>
+ <view class="td1">{{item.matchgroupteamname}}</view>
+ <view class="td">{{item.matchgroupwinlose}}</view>
+ <view class="td">{{item.matchgroupwinrate}}</view>
+ <view class="td">{{item.matchgroupscore}}</view>
+ </view>
+ <view class="littleline"></view>
+ </block>
+</view> -->
 </view>
 <!--8强-->
 <view hidden="{{currentTab!==1}}">
+  <view class="table">
+ <view class="tr">
+<view class="th2"></view>
+ <view class="th1">男组8强</view>
+ <view class="th">胜-负</view>
+ <view class="th ">胜率/胜赛场</view>
+ <view class="th ">积分</view>
+ </view>
+ <view class="littleline"></view>
+ <block wx:for="{{listdata8}}" wx:key="{[id]}">
+ <view class="tr bg-g">
+<view class="td2 o-o" wx:if="{{index== 0||index==1}}">{{item.matchgrouprange}}</view>
+<view class="td2" wx:else>{{item.matchgrouprange}}</view>
+ <view class="td1">{{item.matchgroupteamname}}</view>
+ <view class="td">{{item.matchgroupwinlose}}</view>
+ <view class="td">{{item.matchgroupwinrate}}</view>
+ <view class="td">{{item.matchgroupscore}}</view>
+ </view>
+ <view class="littleline"></view>
+ </block>
+</view>
 </view>
 <!--4强-->
 <view hidden="{{currentTab!==2}}">
+  <view class="table">
+ <view class="tr">
+<view class="th2"></view>
+ <view class="th1">男组4强</view>
+ <view class="th">胜-负</view>
+ <view class="th ">胜率/胜赛场</view>
+ <view class="th ">积分</view>
+ </view>
+ <view class="littleline"></view>
+ <block wx:for="{{listdata4}}" wx:key="{[id]}">
+ <view class="tr bg-g">
+<view class="td2 o-o" wx:if="{{index== 0||index==1}}">{{item.matchgrouprange}}</view>
+<view class="td2" wx:else>{{item.matchgrouprange}}</view>
+ <view class="td1">{{item.matchgroupteamname}}</view>
+ <view class="td">{{item.matchgroupwinlose}}</view>
+ <view class="td">{{item.matchgroupwinrate}}</view>
+ <view class="td">{{item.matchgroupscore}}</view>
+ </view>
+ <view class="littleline"></view>
+ </block>
 </view>
-<!--半决赛-->
-<view hidden="{{currentTab!==3}}">
 </view>
 <!--总决赛-->
-<view hidden="{{currentTab!==4}}">
+<view hidden="{{currentTab!==3}}">
+  <view class="table">
+ <view class="tr">
+<view class="th2"></view>
+ <view class="th1">男组总决赛</view>
+ <view class="th">胜-负</view>
+ <view class="th ">胜率/胜赛场</view>
+ <view class="th ">积分</view>
+ </view>
+ <view class="littleline"></view>
+ <block wx:for="{{listzong}}" wx:key="{[id]}">
+ <view class="tr bg-g">
+<view class="td2 o-o" wx:if="{{index== 0||index==1}}">{{item.matchgrouprange}}</view>
+<view class="td2" wx:else>{{item.matchgrouprange}}</view>
+ <view class="td1">{{item.matchgroupteamname}}</view>
+ <view class="td">{{item.matchgroupwinlose}}</view>
+ <view class="td">{{item.matchgroupwinrate}}</view>
+ <view class="td">{{item.matchgroupscore}}</view>
+ </view>
+ <view class="littleline"></view>
+ </block>
+</view>
 </view>
 </view>

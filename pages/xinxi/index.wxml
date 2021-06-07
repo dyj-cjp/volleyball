@@ -28,3 +28,5 @@
     <text class="duitxt">{{item.teamName}}</text>
   </view>
 </view>
+
+<view class="chuanjian" bindtap="tianbao">队伍填报</view>

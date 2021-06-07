@@ -1,17 +1,17 @@
 <!--pages/ssCompetition/ssCompetition.wxml-->
   <!--导航条-->
-<view class="navbar">
+<!-- <view class="navbar">
   <text wx:for="{{navbar}}" data-idx="{{index}}" class="item {{currentTab==index ? 'active' : ''}}" wx:key="unique" bindtap="navbarTap">{{item}}</text>
-</view>
+</view> -->
  <view class="back">
 <!--四人排-->
 <view hidden="{{currentTab!==0}}">
-  <view class="bigbox">
+  <!-- <view class="bigbox">
 <view class='buttonbox' bindtap="totianbao"><view>院队队伍填报</view>></view>
 </view>
 <view class="bigbox">
 <view class='buttonbox' bindtap="toxinxi"><view>院队队伍信息</view>></view>
-</view>
+</view> -->
 <view class="bigbox">
 <view class='buttonbox1' bindtap="rmss"><view>热门赛事</view>></view>
 <view class="obox">

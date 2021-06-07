@@ -38,7 +38,7 @@
   border: 1px solid rgb(173, 154, 154);
 }
 .playdetail{
-  width: 100rpx;
+  width: 185rpx;
   height: 50rpx;
   margin-top: 20rpx;
 }

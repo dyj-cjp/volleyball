@@ -2,18 +2,28 @@
 <view class="tianjia">
   <view class="tianjia1">
     <text>添加队员</text>
-    <image class="close" src="../../images/teamInfomation/close.png"></image>
+    <image class="close" src="../../images/teamInfomation/close.png" bindtap="back"></image>
   </view>
 
   <view class="addx">
     <text>姓名：</text>
-    <input type="text" data-type="name1" placeholder="请输入姓名" bindinput="handleInput"></input>
+    <input type="text" data-type="name1" placeholder="请输入姓名" bindinput="nameInput"></input>
   </view>
 
   <view class="addx">
     <text>学号：</text>
-    <input type="text" data-type="number1" placeholder="请输入学号" bindinput="handleInput"></input>
+    <input type="text" data-type="number1" placeholder="请输入学号" bindinput="studyInput"></input>
+  </view>
+
+  <view class="addx">
+    <text>球队号码：</text>
+    <input type="text" data-type="number" placeholder="请输入球队号码" bindinput="numberInput"></input>
+  </view>
+  <view class="addx">
+    <text>位置：</text>
+    <input type="text" data-type="number" placeholder="请输入场上位置" bindinput="positionInput"></input>
   </view>
   
-  <button class="addsure" bindtap="yes">确定</button>
+
 </view>
+<button class="addsure" bindtap="yes">确定</button>

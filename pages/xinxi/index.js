@@ -15,6 +15,57 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    console.log(options);
+    if(options.tname){
+      if(options.tname=="信院"){
+        this.setData({
+          currentIndex:1
+        })
+      }
+      if(options.tname=="法学"){
+        this.setData({
+          currentIndex:2
+        })
+      }
+      if(options.tname=="人文"){
+        this.setData({
+          currentIndex:3
+        })
+      }
+      if(options.tname=="经济"){
+        this.setData({
+          currentIndex:4
+        })
+      }
+      if(options.tname=="地旅"){
+        this.setData({
+          currentIndex:5
+        })
+      }
+      if(options.tname=="数院"){
+        this.setData({
+          currentIndex:6
+        })
+      }
+      if(options.tname=="工商"){
+        this.setData({
+          currentIndex:7
+        })
+      }
+      if(options.tname=="财税"){
+        this.setData({
+          currentIndex:8
+        })
+      }
+      if(options.tname=="公管"){
+        this.setData({
+          currentIndex:9
+        })
+      }
+      this.setData({
+        tname:options.tname
+      })
+    }
     this.getCollegeTeamList();
     this.getTeamList();
 
@@ -133,6 +184,11 @@ Page({
     wx.setNavigationBarTitle({
       title: teamName
    })
+  },
+  tianbao:function(){
+    wx.navigateTo({
+      url: '/pages/tainbao/index',
+    })
   },
   /**
    * 生命周期函数--监听页面初次渲染完成

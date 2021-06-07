@@ -50,23 +50,41 @@
   "simulatorType": "wechat",
   "simulatorPluginLibVersion": {},
   "condition": {
-    "search": {
-      "list": []
-    },
-    "conversation": {
+    "plugin": {
       "list": []
     },
     "game": {
-      "list": []
-    },
-    "plugin": {
       "list": []
     },
     "gamePlugin": {
       "list": []
     },
     "miniprogram": {
-      "list": []
+      "list": [
+        {
+          "name": "pages/teach/index",
+          "pathName": "pages/teach/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/volleyteach/volleyteach",
+          "pathName": "pages/volleyteach/volleyteach",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/tainbao/index",
+          "pathName": "pages/tainbao/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/2018Reviews/2018Reviews",
+          "pathName": "pages/2018Reviews/2018Reviews",
+          "scene": null
+        }
+      ]
     }
   }
 }

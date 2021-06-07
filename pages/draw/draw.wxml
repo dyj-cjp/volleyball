@@ -8,14 +8,14 @@
        <view class="content">
          <view class="row">
            <text class="text-ti">主题</text>
-           <input class="get" placeholder="四人赛男生组抽签" bindinput="inputvalue"/>
+           <input class="get" placeholder="如：四人赛男生组抽签" bindinput="inputvalue"/>
           </view>
          <view class="row2">
            <text class="text">参与人数</text>
            <view class='stepper'>
-              <text bindtap='bindPlus'>+</text>
-              <input value='{{num}}'></input>
-              <text bindtap='bindMinus'>-</text>
+              <text bindtap='bindPlusTotal'>+</text>
+              <text class="totaltext">{{totalnum}}</text>
+              <text bindtap='bindMinusTotal'>-</text>
             </view>
           </view>
         
@@ -23,7 +23,7 @@
            <text class="text">选中人数</text>
            <view class='stepper'>
               <text bindtap='bindPlus'>+</text>
-              <input value='{{num}}'></input>
+              <text class="totaltext">{{selectnum}}</text>
               <text bindtap='bindMinus'>-</text>
             </view>
           </view>

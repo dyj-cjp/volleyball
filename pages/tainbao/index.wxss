@@ -1,6 +1,28 @@
 /* pages/tainbao/index.wxss */
 page {
-  background-color: #FFFFFF;
+  background-color: rgba(0,0,0,.1);
+}
+.wrap{
+  background-color: #fff;
+  margin-bottom:30rpx;
+}
+
+.item{
+  display:flex;
+  height:100rpx;
+  width:90vw;
+  margin:0 auto;
+  border-top:1px solid rgba(0,0,0,.1);
+  align-items: center;
+}
+.textbox{
+  flex:1.5;
+}
+.inputbox{
+  flex:3;
+}
+.choose{
+  flex:2.6;
 }
 
 /* 球队名片 */
@@ -52,13 +74,14 @@ page {
 /* 队长信息 */
 .duizhangxinxi {
   display: flex;
+  margin:0 auto;
   justify-content: space-between;
-  margin-left: 50rpx;
-  margin-right: 50rpx;
+  width:90vw;
+  padding:50rpx 0;
+  align-items: center;
 }
 
 .duizhangdetail {
-  font-size: 28rpx;
   padding-bottom: 5rpx;
   border-bottom: 5rpx solid red;
 }
@@ -66,85 +89,83 @@ page {
 /* 显示 */
 .xinxiadd2 {
   display: flex;
+  align-items: center;
 }
 
 /* 头像 */
 .add2 {
-  width: 23rpx;
-  height: 23rpx;
+  width: 40rpx;
+  height: 40rpx;
   margin-right: 6rpx;
   margin-top: 6rpx;
+  vertical-align: middle;
+  display:inline-block;
 }
 
 .add2txt {
-  font-size: 24rpx;
+  margin-top:.7vw;
+  font-size: 28rpx;
   font-family: STXihei Regular;
+  display:inline-block;
 }
 
 .show {
   width: 678rpx;
-  height: 144rpx;
-  margin: 35rpx;
-  display: flex;
-  background-color: #F5F5F5;
-  border-radius: 20rpx;
+  height: 100rpx;
+  margin: 0 auto;
+
 }
 
 .duizhanglogo {
   float: left;
   width: 82rpx;
   height: 82rpx;
-  margin: 30rpx;
 }
 
 .zhangdetail {
   float: left;
-  margin-top: 40rpx;
-  font-size: 24rpx;
   font-family: Regular;
+  display:flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 68vw;
+  height:82rpx;
 }
 
-.zhangnumber {
-  font-size: 20rpx;
-}
+
 
 /* 队员 */
 .show1 {
   width: 678rpx;
-  height: 140rpx;
-  margin: 35rpx;
-  background-color: #F5F5F5;
-  border-radius: 20rpx;
+  height: 100rpx;
+  margin: 0 auto;
+  margin-bottom:15rpx;
+  border-bottom:1px solid rgba(0,0,0,.1);
 }
 
 .duiyuanlogo {
   float: left;
   width: 82rpx;
   height: 82rpx;
-  margin: 30rpx;
 }
 
 .yuandetail {
   float: left;
-  margin-top: 40rpx;
-  font-size: 24rpx;
   font-family: Regular;
+  display:flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 68vw;
+  height:82rpx;
 }
 
-.yuannumber {
-  font-size: 20rpx;
-  padding-bottom: 38rpx;
-  border-bottom: 1px solid #c9c9c9;
-}
 
 /* 个性图片 */
 .add1 {
   position: relative;
-  width: 688rpx;
+  width:100vw;
   height: 170rpx;
-  margin-left: 35rpx;
-  background-color: #F5F5F5;
-  border-radius: 20rpx;
+  background-color: #fff;
 }
 
 .add1pic {
@@ -161,8 +182,20 @@ page {
   color: #F55438;
 }
 
-.button1 {
-  height: 80rpx;
-  width: 300rpx;
-  margin-top: 40rpx;
+.chuanjian{
+  width:400rpx;
+  height:100rpx;
+  border-radius:100rpx;
+  background-color:rgba(233,55,55);
+  color:white;
+  text-align:center;
+  line-height:100rpx;
+  font-weight:bold;
+  margin: 0 auto;
+  margin-top:30rpx;
+  margin-bottom:30rpx;
+}
+.imgshow{
+  background-color: #fff;
+  margin-top:30rpx;
 }

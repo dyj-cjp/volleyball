@@ -19,7 +19,8 @@
     "pages/wjReviews/wjReviews",
     "pages/index/index",
     "pages/drawing/drawing",
-    "pages/drawresult/drawresult"
+    "pages/drawresult/drawresult",
+    "pages/volleyteach/volleyteach"
   ],
   "window": {
     "backgroundTextStyle":"light",

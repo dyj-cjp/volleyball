@@ -2,16 +2,16 @@
 <view class="nav">
   <view class="title">我参与的</view>
   <view class="nav_item">
-    <view class="nav_item1" wx:for="{{dataList}}" wx:key="idindex">
-      <view class="indexid">{{item.idindex}}</view>
+    <view class="nav_item1" wx:for="{{dataList}}" wx:key="index" bindtap="itemclick" data-title="{{item.title}}" data-lotid="{{item.createopenid}}">
+      <view class="indexid">{{index+1}}</view>
       <view class="playdetail">
         <view class="playtitle">{{item.title}}</view>
-        <view class="playdata">{{item.datas}}</view>
+        <view class="playdata">{{item.time}}</view>
       </view>
-      <view class="number">
+      <!-- <view class="number">
         <view class="playch">现/总</view>
-        <view class="playnumber">{{item.num}}人</view>
-      </view>
+        <view class="playnumber">待定人</view>
+      </view> -->
     </view>
   </view>
 </view>

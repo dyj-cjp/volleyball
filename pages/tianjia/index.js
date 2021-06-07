@@ -7,32 +7,80 @@ Page({
    */
   data: {
     name:null,
-     number:null
+     number:null,
+     teamname:null,
+     nickname:null,
+     studynumber:null,
+     number:null,
+     position:null,
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    var that=this;
+    console.log(options.teamName);
+    that.setData({
+      teamname:options.teamName
+    })
   },
-  
-  handleInput(event){
-    let type = event.currentTarget.dataset.type;
+  back:function(){
+    wx.navigateBack({
+      delta: 1,
+    })
+  },
+  nameInput:function(e){
+    let name=e.detail.value;
+    console.log(name);
     this.setData({
-      [type]: event.detail.value
+      nickname:name
+    })
+  },
+  studyInput:function(e){
+    let study=e.detail.value;
+    this.setData({
+      studynumber:study
+    })
+  },
+  numberInput:function(e){
+    let number=e.detail.value;
+    this.setData({
+      number:number
+    })
+  },
+  positionInput:function(e){
+    let position=e.detail.value;
+    this.setData({
+      position:position
     })
   },
 
   yess(){
-    var obj1={name:this.data.name,number:this.data.number}
+    var obj1={name:this.data.nickname,number:this.data.studynumber}
     var arr1=wx.getStorageSync('peoplearr1');
     arr1.push(obj1);
     wx.setStorageSync('peoplearr1', arr1)
-    //跳转到队伍填报页面
-      wx.navigateBack({
-        url:'/pages/tainbao/index'
-      })
+
+    var that=this;
+
+    console.log(that.data);
+    $api.addTeamMember({  //post请求
+      teamName:that.data.teamname,
+      type:"true",
+      nickName:that.data.nickname,
+      studyNumber:that.data.studynumber,
+      number:that.data.number,
+      position:that.data.position
+    }).then(res=>{
+      console.log(res);
+          //跳转到队伍填报页面
+          wx.navigateBack({
+            url:'/pages/tainbao/index'
+          })
+    }).catch(err=>{
+      console.log(err);
+    })
   },
   
   /**

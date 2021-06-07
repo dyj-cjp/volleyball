@@ -8,6 +8,16 @@ Page({
   data: {
      statusBarHeight:getApp().globalData.statusBarHeight,
   },
+  teachtap:function(){
+    wx.navigateTo({
+      url: '/pages/volleyteach/volleyteach',
+    })
+  },
+  tianbao:function(){
+    wx.navigateTo({
+      url: '/pages/xinxi/index'
+    })
+  },
 
   /**
    * 生命周期函数--监听页面加载

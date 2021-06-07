@@ -2,9 +2,8 @@
 /* 大卡片 */
 .tianjia{
   width: 651rpx;
-  height: 525rpx;
+  margin:0 auto;
   margin-top: 300rpx;
-  margin-left: 55rpx;
   border-radius: 21rpx;
   border: 2rpx solid #F55438;
 }
@@ -26,14 +25,14 @@
 /* 文本 */
 .tianjia .addx{
   display: flex;
-  margin: 60rpx 80rpx;
+  margin: 30rpx 40rpx;
+  justify-content: space-between;
 }
 /* 文本框 */
 .tianjia input{
   height: 56rpx;
   width: 375rpx;
   border-radius: 20rpx;
-  border: 2rpx solid #B8B7B7;
   text-align: center;
 }
 /* 按钮 */
@@ -44,4 +43,5 @@
   font-family: STXihei Regular;
   font-size: 30rpx;
   border: 1px solid #F55438;
+  margin-top: 30rpx;
 }

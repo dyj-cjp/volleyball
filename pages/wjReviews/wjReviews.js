@@ -6,7 +6,6 @@ Page({
    */
   data: {
 listData:[
-  {"date":"2020","img":"../images/wj1.png","url":"/pages/2018Reviews/2018Reviews"},
   {"date":"2019","img":"../images/wj2.png","url":"/pages/2018Reviews/2018Reviews"},
   {"date":"2018","img":"../images/wj3.png","url":"/pages/2018Reviews/2018Reviews"},
   {"date":"2017","img":"../images/wj4.png","url":"/pages/2018Reviews/2018Reviews"}

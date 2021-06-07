@@ -4,4 +4,7 @@
   <view class="line"></view>
   <view class="bt" bindtap="buttonListener">抽 取</view>
 </view>
+<view wx:if="{{!isauth}}">
+  <button class="share" catchtap="getauth">请先授权登录</button>
+</view>
 <button class="share" open-type='share'>分享给好友</button>

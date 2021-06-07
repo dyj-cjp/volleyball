@@ -1,8 +1,13 @@
 <!--pages/mine/index.wxml-->
 <view class="nickbgc">
   <view class="header">
-    <image class="userinfo-face" src="../../images/mine/logo.png"></image>
-    <text class="userinfo-nickname">用户名称</text>
+    <view class="authview" wx:if="{{!isauth}}">
+      <button catchtap="getauth">未登录</button>
+    </view>
+    <view wx:else>
+      <image class="userinfo-face" src="{{userInfo.avatarUrl}}"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </view>
   </view>
 </view>
 

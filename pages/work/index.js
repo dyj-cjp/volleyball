@@ -1,4 +1,5 @@
 // pages/work/index.js
+const $api = require('../../network/request.js').API;
 Page({
 
   /**
@@ -6,19 +7,35 @@ Page({
    */
   data: {
     dataList:[
-      {"idindex":1,"title":"你好","datas":"2020/22/33","num":"1/3"},
-      {"idindex":2,"title":"你好","datas":"2020/22/33","num":"1/3"},
-      {"idindex":3,"title":"你好","datas":"2020/22/33","num":"1/3"},
-      {"idindex":4,"title":"你好","datas":"2020/22/33","num":"1/3"},
     ],
 
+  },
+  itemclick:function(e){
+    let title=e.currentTarget.dataset.title;
+    let createopenid=e.currentTarget.dataset.lotid;
+    wx.navigateTo({
+      url:'../drawresult/drawresult?main='+[title,createopenid]
+    })
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+    let openid = wx.getStorageSync('openid');
+    var that=this;
+    $api.catchProcess({
+      a:openid,
+      page:0,
+      size:50
+    }).then(res=>{
+      console.log("res=>",res);
+      that.setData({
+        dataList:res.data.content
+      })
+    }).catch(err=>{
+      console.log("err=>",err);
+    })
   },
 
   /**

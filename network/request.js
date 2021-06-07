@@ -3,7 +3,8 @@ const app=getApp();
 const GET='GET';
 const POST='POST';
 //定义全局常量baseUrl用来存储前缀
-const baseURL="http://172.81.245.195:8080/ball";
+// const baseURL="http://172.81.245.195:8080/ball";
+const baseURL="https://www.cauliflowerlucky.com/ball"
 
 function request(method,url,data){
   return new Promise(function(resolve,reject){
@@ -51,6 +52,10 @@ const API={
   getMatchGroup: (data) => request(GET, `/api/matchGroup/search`, data), //根据分组和赛事阶段获取统计数据
   upDateDianZan:(data) => request(GET,`/api/review/updatedianzan`, data), //点赞数修改
   getMessage: (data) => request(GET, `/api/review/find`, data), //根据哪届来获取信息
+  getAllDraw: (data) => request(GET, `/api/draw/search`, data),//获取我发起的抽签
+  getDrawResult: (data) => request(GET, `/api/draw/find`, data),//获取抽签结果的人数
+  getProcess: (data) => request(GET, `/api/process/search`, data),//获取某个抽签的结果列表
+  catchProcess: (data) => request(GET, `/api/process/catch`, data),//获取某一用户所有抽签列表
 
   //post请求
   addCollegeTeam: (data) => request(POST, `/api/collegeTeam`, data), //院队信息添加
@@ -59,6 +64,10 @@ const API={
   addMatch: (data) => request(POST, `/api/match`, data), // 添加赛事
   addMatchData: (data) => request(POST, `/api/matchData`, data), //赛事数据添加
   addMatchGroup: (data) => request(POST, `/api/matchGroup`, data), //赛事阶段数据添加
+  addDraw: (data) => request(POST, `/api/draw`, data),//添加抽签
+  addUser: (data) => request(POST, `/api/login`, data),//获取用户openid
+  addProcess: (data) => request(POST, `/api/process`, data),//用户抽签
+  addReview: (data) => request(POST,`/api/review`,data),//添加回顾照片
 
 
   

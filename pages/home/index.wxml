@@ -34,16 +34,16 @@
   </navigator>
 
   <view class="main1">
-    <navigator class="main11" url="/pages/teach/index">
+    <navigator class="main11" bindtap="teachtap">
       <image class="jiaoxue" src="../../images/homeImg/teach.png">
         <view class="txt">排球教学</view>
       </image>
     </navigator>
 
-    <navigator class="main12">
+    <view class="main12" bindtap="tianbao">
       <image class="luntan" src="../../images/homeImg/forum.png">
-        <view class="txt">精彩论坛</view>
+        <view class="txt">队伍相关</view>
       </image>
-    </navigator>
+    </view>
   </view>
 </view>

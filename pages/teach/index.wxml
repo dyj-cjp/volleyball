@@ -1,24 +1,2 @@
-<view class="page-body">
-  <view class="page-section tc">
-    <video 
-      id="myVideo" 
-      src="http://172.81.245.195:8888/group1/M00/00/01/rFH1w2BvMeiAQEH4AC98p2Ii_q8114.mp4" 
-      binderror="videoErrorCallback" 
-      danmu-list="{{danmuList}}" 
-      enable-danmu 
-      danmu-btn 
-      show-center-play-btn='{{false}}' 
-      show-play-btn="{{true}}" 
-      controls
-      picture-in-picture-mode="{{['push', 'pop']}}"
-      bindenterpictureinpicture='bindVideoEnterPictureInPicture'
-      bindleavepictureinpicture='bindVideoLeavePictureInPicture'
-    ></video>
-    <view style="margin: 30rpx auto" class="weui-label">弹幕内容</view>
-    <input bindblur="bindInputBlur" class="weui-input" type="text" placeholder="在此处输入弹幕内容" />
-    <button style="margin: 30rpx auto"  bindtap="bindSendDanmu" class="page-body-button" type="primary" formType="submit">发送弹幕</button>
-    <navigator style="margin: 30rpx auto"  url="picture-in-picture" hover-class="other-navigator-hover">
-      <button type="primary" class="page-body-button" bindtap="bindPlayVideo">小窗模式</button>
-    </navigator>
-  </view>
-</view>
+<view class='buttonbox' bindtap="totianbao">院队队伍填报</view>
+<view class='buttonbox' bindtap="toxinxi">院队队伍信息</view>

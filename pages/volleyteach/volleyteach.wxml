@@ -1,0 +1,67 @@
+<!--pages/home/home.wxml-->
+<view class="video" wx:if="{{!show}}" >
+  <view class="video-content" bindtap="popup">
+    <view class="content-img"><image src="http://172.81.245.195:8888/group1/M00/00/01/rFH1w2C3kvyAbgbTAABOC-aTEJs533.jpg" class="auto-img"></image></view>
+    <view class="content-text">校队男排比赛片段</view>
+  </view>
+  <view class="video-content" bindtap="popup">
+    <view class="content-img"><image src="http://172.81.245.195:8888/group1/M00/00/01/rFH1w2C3kvyAbgbTAABOC-aTEJs533.jpg"  class="auto-img"></image></view>
+    <view class="content-text">排球扣球脚步</view>
+  </view>
+  <view class="video-content" bindtap="popup">
+    <view class="content-img"><image src="http://172.81.245.195:8888/group1/M00/00/01/rFH1w2C3kvyAbgbTAABOC-aTEJs533.jpg" class="auto-img"></image></view>
+    <view class="content-text">排球垫球</view>
+  </view>
+  <view class="video-content" bindtap="popup">
+    <view class="content-img"><image src="http://172.81.245.195:8888/group1/M00/00/01/rFH1w2C3kvyAbgbTAABOC-aTEJs533.jpg" class="auto-img"></image></view>
+    <view class="content-text">排球跳发</view>
+  </view>
+  <view class="video-content" bindtap="popup">
+    <view class="content-img"><image src="http://172.81.245.195:8888/group1/M00/00/01/rFH1w2C3kvyAbgbTAABOC-aTEJs533.jpg"  class="auto-img"></image></view>
+    <view class="content-text">排球鱼跃</view>
+  </view>
+  <view class="video-content" bindtap="popup">
+    <view class="content-img"><image src="http://172.81.245.195:8888/group1/M00/00/01/rFH1w2C3kvyAbgbTAABOC-aTEJs533.jpg"  class="auto-img"></image></view>
+    <view class="content-text">排球传球</view>
+  </view>
+  <view class="video-content" bindtap="popup">
+    <view class="content-img"><image src="http://172.81.245.195:8888/group1/M00/00/01/rFH1w2C3kvyAbgbTAABOC-aTEJs533.jpg"  class="auto-img"></image></view>
+    <view class="content-text">排球传球</view>
+  </view>
+  <view class="video-content" bindtap="popup">
+    <view class="content-img"><image src="http://172.81.245.195:8888/group1/M00/00/01/rFH1w2C3kvyAbgbTAABOC-aTEJs533.jpg"  class="auto-img"></image></view>
+    <view class="content-text">排球传球</view>
+  </view>
+  <view class="video-content" bindtap="popup">
+    <view class="content-img"><image src="http://172.81.245.195:8888/group1/M00/00/01/rFH1w2C3kvyAbgbTAABOC-aTEJs533.jpg"  class="auto-img"></image></view>
+    <view class="content-text">排球传球</view>
+  </view>
+  <view class="video-content" bindtap="popup">
+    <view class="content-img"><image src="http://172.81.245.195:8888/group1/M00/00/01/rFH1w2C3kvyAbgbTAABOC-aTEJs533.jpg"  class="auto-img"></image></view>
+    <view class="content-text">排球传球</view>
+  </view>
+</view>
+<view class="detail-page" wx:else>
+    <view class="page-section tc">
+    <video 
+      id="myVideo" 
+      src="http://172.81.245.195:8888/group1/M00/00/01/rFH1w2C3k0WAA0n9ACX0CbpkiaA122.mp4" 
+      binderror="videoErrorCallback" 
+      enable-danmu 
+      show-center-play-btn='{{false}}' 
+      show-play-btn="{{true}}" 
+      controls
+      picture-in-picture-mode="{{['push', 'pop']}}"
+      bindenterpictureinpicture='bindVideoEnterPictureInPicture'
+      bindleavepictureinpicture='bindVideoLeavePictureInPicture'
+    ></video>
+    <!-- <view style="margin: 30rpx auto" class="weui-label">弹幕内容</view>
+    <input bindblur="bindInputBlur" class="weui-input" type="text" placeholder="在此处输入弹幕内容" />
+    <button style="margin: 30rpx auto"  bindtap="bindSendDanmu" class="page-body-button" type="primary" formType="submit">发送弹幕</button>
+    <navigator style="margin: 30rpx auto"  url="picture-in-picture" hover-class="other-navigator-hover">
+      <button type="primary" class="page-body-button" bindtap="bindPlayVideo">小窗模式</button>
+    </navigator> -->
+  </view>
+    <image class="closeImg" src="../../images/teamInfomation/stop.png" bindtap="exit"></image>
+  </view>
+

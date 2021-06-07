@@ -1,5 +1,5 @@
 <!--pages/tainbao/index.wxml-->
-<image class="card" src="../../images/teamReport/card.png"></image>
+<!-- <image class="card" src="../../images/teamReport/card.png"></image>
 <view class="duiwuname">
 <input type="text" value="{{teamName}}" maxlength="8" bindinput="bindKeyInput" placeholder="球队队伍名称"/>
 </view>
@@ -8,18 +8,37 @@
   <textarea maxlength="70" auto-height placeholder="介绍一下你的球队吧" bindinput="bindKeyInput"></textarea>
 </view>
 <image class="logo" src="../../images/teamReport/logo.png"></image>
-<view class="logodetail"><input type="text" bindinput="bindKeyInput" maxlength="8" placeholder="球队所在学院名称"/></view>
+<view class="logodetail"><input type="text" bindinput="bindKeyInput" maxlength="8" placeholder="球队所在学院名称"/></view> -->
 
-<view class="duizhangxinxi">
+<view class="wrap">
+  <view class="item">
+  <view class="textbox">球队名称</view>
+  <view class="inputbox"><input type="text" placeholder="请输入球队名称" bindinput="teamnameinput"/></view>
+</view>
+<view class="item">
+  <view class="textbox">球队简介</view>
+  <view class="inputbox"><input type="text" placeholder="请输入球队简介" bindinput="infoinput"/></view>
+</view>
+<view class="item">
+  <view class="textbox">球队学院</view>
+  <view class="choose">{{choosevalue}}</view>
+  <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+    <view class="chossebtn" style="color:rgba(250,99,99)">选择</view>
+  </picker>
+</view>
+</view>
+
+<view class="wrap">
+  <view class="duizhangxinxi">
   <view class="duizhangdetail">队长信息</view>
-  <view class="xinxiadd2" bindtap="tianjiaxinxi">
+  <view class="xinxiadd2" bindtap="tianjiaxinxi" data-param="{{teamName}}">
     <image class="add2" src="../../images/teamReport/add2.png"></image>
     <text class="add2txt">添加</text>
   </view>
 </view>
 
 <!-- 信息显示 -->
-<view class="show">
+<view class="show" wx:if="{{userInfo[0]}}">
   <view>
     <image class="duizhanglogo" src="../../images/teamReport/1.png"></image>
     <view class="zhangdetail">
@@ -28,10 +47,12 @@
     </view>
   </view>
 </view>
+</view>
 
-<view class="duizhangxinxi">
+<view class="wrap">
+  <view class="duizhangxinxi">
   <view class="duizhangdetail">队员信息</view>
-  <view class="xinxiadd2" bindtap="addnumber">
+  <view class="xinxiadd2" bindtap="addnumber" data-param="{{teamName}}">
     <image class="add2" src="../../images/teamReport/add2.png"></image>
     <text class="add2txt">添加</text>
   </view>
@@ -47,13 +68,19 @@
     </view>
   </view>
 </view>
+</view>
 
-<view class="teamImg">
+
+<!-- <view class="teamImg">
   <image src="{{teamsrc}}" mode="aspectFit"></image>
-</view> 
-<view class="add1" bindtap="addimg">
+</view>  -->
+<view class="add1" bindtap="addimg" wx:if="{{!teamsrc}}">
   <image class="add1pic" src="../../images/teamReport/add1.png"></image>
   <text class="add1txt">添加球队个性图片</text>
 </view>
+<view wx:else class="imgshow">
+  <image class="" src="{{teamsrc}}"></image>
+</view>
 
-<button type="primary" class="button1" bindtap="createTeam">创建队伍</button>
+<view class="chuanjian" bindtap="tianbao">创建队伍</view>
+<view style="height:30rpx;"></view>
